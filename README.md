@@ -65,19 +65,17 @@ The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical s
 
 ![MCP Diagram](docs/MCP-Diagram.png)
 
-The more interesting idea this project is exploring is whether the **MCP (Model Context Protocol) server** could become a *standardized interface* for marketing AI in a given vertical.
+Right now, when you add AI to a marketing stack, **the AI and the tooling are coupled together. Every deployment is bespoke.** This project hypothesises a better structure: define a canonical MCP schema for what a marketing AI in wine e-commerce needs — the data it reads, the tools it calls, the domains it writes to — and let both sides of that interface be optimized independently.
 
-Right now, when you add AI to a marketing stack, the AI and the tooling are coupled together. Every deployment is bespoke. This project hypothesises that there's a better structure: define a canonical MCP schema for what a marketing AI in wine e-commerce needs — the data it reads, the tools it calls, the domains it writes to — and then let both sides of that interface be optimized independently.
+That separation enables two things bespoke deployments can't:
 
-That separation enables two things that aren't available when AI and tools are tightly coupled:
+**AI optimized for the vertical.** A model tuned specifically for wine e-commerce marketing can trust that the MCP contract is stable. No hedging for tool inconsistency. Deep specialization — the right suppression rules for a seasonal campaign, the right tone for a collector persona, the right KPIs for a winback — applied reliably.
 
-**1. AI optimized for the vertical.** A model or skill set that's been trained and tuned specifically for wine e-commerce marketing can trust that the MCP contract is stable. It doesn't need to hedge for tool inconsistency. It can be deeply specialized — knowing the right suppression rules for a seasonal campaign, the right tone for a collector persona, the right KPIs for a winback — and apply that knowledge reliably.
+**Independent optimization of the data and tools layer.** Swap the ESP. Improve data quality. Add richer behavioral signals. None of it touches the AI. The interface remains the same. Both sides improve at their own rate, for their own reasons.
 
-**2. Independent optimization of the data and tools layer.** The MCP abstraction means the underlying implementation can change — better data quality, faster queries, richer behavioral signals, a different ESP — without touching the AI. The interface remains the same. The two sides can improve at different rates and for different reasons.
+This repo is the concrete implementation: 14 skills, a 7-domain MCP server with 84 typed functions, synthetic seed data.
 
-This repo is the concrete implementation of that idea: 14 skills, a 7-domain MCP server with 84 typed functions, and synthetic seed data to run the full system.
-
-The broader hypothesis: a canonical MCP schema for a vertical, adopted broadly as an industry standard, could become the stable interface between AI and the marketing stack — letting both sides improve independently, and giving the whole ecosystem something to build on. And if that holds, the next question writes itself: could we see AI models purpose-built for specific marketing verticals? A standard data layer would make that a lot more tractable.
+**The broader hypothesis:** a canonical MCP schema for a vertical, adopted broadly as an industry standard, becomes the stable interface between AI and the marketing stack — giving the whole ecosystem something to build on. And if that holds, the next question writes itself: could we see AI models purpose-built for specific marketing verticals? **A standard data layer would make that a lot more tractable.**
 
 ---
 
