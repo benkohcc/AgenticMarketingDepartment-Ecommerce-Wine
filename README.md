@@ -6,9 +6,19 @@
 
 Most AI in marketing gets bolted on. An AI writing assistant here, an AI analytics layer there — each one slotted into an existing process designed for humans. This project takes a different starting point: **what if we threw away existing marketing practices entirely and asked AI to design the function from scratch?**
 
-The question driving every decision was: what does a marketing department actually need to do, and what would it look like if AI designed it with no legacy constraints? The premise was that there is no human marketing team — AI replaces it entirely. AI was asked what capabilities it would need to run a marketing operation end to end — from detecting overstock in a warehouse to writing campaign copy, launching ads, personalising recommendations, and writing retrospectives. Critically, everything designed here — the MCP functions, the data schemas, the skill prompts — is an interface for AI to consume, not for humans. Then those answers became the spec.
+The question driving every decision was: what does a marketing department actually need to do, and what would it look like if AI designed it with no legacy constraints? The premise: **there is no human marketing team — AI replaces it entirely.** Starting from that constraint, AI was asked what capabilities it would need to run a marketing operation end to end:
 
-The result is 14 skills running the full marketing lifecycle for a wine e-commerce store: strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill is autonomous, runs on a schedule or on demand, and interacts with everything else through a shared data layer rather than direct communication. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution. The deeper bet the project is making: that an MCP server with a canonical schema for a marketing vertical could become the stable interface between AI and the marketing stack — letting the AI layer and the tooling layer improve independently, without the bespoke coupling that makes most AI marketing deployments fragile.
+- detecting overstock and high-intent inventory signals
+- writing campaign briefs, copy, and retrospectives
+- launching and optimising paid ads
+- personalising on-site recommendations
+- segmenting customers by RFM, CLV, and churn risk
+
+Critically, **everything designed here — the MCP functions, the data schemas, the skill prompts — is an interface for AI to consume, not for humans.** Those answers became the spec.
+
+The result is **14 autonomous skills** running the full marketing lifecycle — strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill runs on a schedule or on demand and communicates with every other skill through a shared MCP data layer rather than direct calls. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution.
+
+The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical schema for a marketing vertical could become the stable interface between AI and the marketing stack — letting the AI layer and the tooling layer improve independently, without the bespoke coupling that makes most AI marketing deployments fragile.
 
 ---
 
