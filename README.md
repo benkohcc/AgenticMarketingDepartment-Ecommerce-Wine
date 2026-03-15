@@ -334,4 +334,5 @@ echo "[]" > context/active-campaigns.json
 
 ## Full Documentation
 
-See [`wine-marketing-complete-spec.md`](wine-marketing-complete-spec.md) for the complete system specification: all 53 MCP functions across 7 domains, full skill decision logic, JSON schemas, the inter-skill communication model, and the external services architecture.
+- [`wine-marketing-complete-spec.md`](wine-marketing-complete-spec.md) — complete system specification: all 84 MCP functions across 7 domains, full skill decision logic, JSON schemas, the inter-skill communication model, and the external services architecture.
+- [`wine-marketing-sample-data-plan.md`](wine-marketing-sample-data-plan.md) — synthetic data generation spec: how the 1,000-customer seed dataset is constructed with cross-dataset coherence and realistic per-customer variance (jitter models, correlated noise, intentional outliers).
