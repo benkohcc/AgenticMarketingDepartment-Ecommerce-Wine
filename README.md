@@ -24,7 +24,7 @@ That separation enables two things that aren't available when AI and tools are t
 
 **2. Independent optimization of the data and tools layer.** The MCP abstraction means the underlying implementation can change — better data quality, faster queries, richer behavioral signals, a different ESP — without touching the AI. The interface remains the same. The two sides can improve at different rates and for different reasons.
 
-This repo is the concrete implementation of that idea: 13 AI skills, a 7-domain MCP server with 84 typed functions, and synthetic seed data to run the full system.
+This repo is the concrete implementation of that idea: 14 skills, a 7-domain MCP server with 84 typed functions, and synthetic seed data to run the full system.
 
 ---
 
@@ -199,7 +199,7 @@ The AI-specific fields — `churn_risk_score`, `varietal_affinities`, `intent_sc
 │   ├── .claude-plugin/
 │   │   └── plugin.json             # Plugin manifest
 │   ├── .mcp.json                   # MCP connector URL (auto-updated by start-mcp.sh)
-│   └── skills/                     # 13 skill directories, each with a SKILL.md
+│   └── skills/                     # 14 skill directories, each with a SKILL.md
 │       ├── plan-campaign/
 │       ├── generate-content/
 │       └── ...
@@ -318,14 +318,14 @@ Keep this terminal open. The tunnel URL changes every time you restart the scrip
 
 ### 4. Invoke skills
 
-All 13 skills are now available in Cowork. You can:
+All 14 skills are now available in Cowork. You can:
 - **Invoke manually:** type `/plan-campaign`, `/check-inventory`, `/inspect-customer cust-0042`, etc.
 - **Let scheduled runs fire:** skills with cron schedules run automatically at their configured times
 - **Request ad hoc campaigns:** use `/campaign-request` to describe what you want in plain language
 
 ---
 
-## The 13 Skills
+## The 14 Skills
 
 | Skill | Schedule | Description |
 |---|---|---|
