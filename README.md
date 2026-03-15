@@ -325,6 +325,12 @@ All 14 skills are now available in Cowork. You can:
 
 ---
 
+## Skill Workflow
+
+![Skill Workflow](docs/Skill-Workflow.png)
+
+---
+
 ## The 14 Skills
 
 | Skill | Schedule | Description |
