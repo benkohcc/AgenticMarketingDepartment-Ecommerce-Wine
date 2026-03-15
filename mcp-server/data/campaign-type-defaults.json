@@ -1,0 +1,90 @@
+{
+  "new_arrival": {
+    "default_channels": ["email", "social"],
+    "budget_range": "$200–500",
+    "primary_kpis": ["pdp_view_rate", "add_to_cart_rate", "email_open_rate"],
+    "send_cadence": "Single launch send on arrival_date. Optional teaser 48h before for Loyalists.",
+    "tone_angle": "Excitement and discovery — lead with story (vineyard, winemaker, vintage), not sell. No urgency clichés.",
+    "discount": false,
+    "paid": false,
+    "primary_personas": ["Loyalist", "Explorer"],
+    "suppression_notes": "No post-purchase suppression for this type. No fatigue override needed."
+  },
+  "promotion": {
+    "default_channels": ["email", "paid", "social"],
+    "budget_range": "8–12% of GMV target",
+    "primary_kpis": ["units_sold", "revenue", "email_conversion_rate", "paid_roas"],
+    "send_cadence": "Day 1 launch → Day 3 reminder to non-openers → Day before expiry final send.",
+    "tone_angle": "Offer-forward, then justified with story. Lead with discount code and savings amount.",
+    "discount": true,
+    "paid": true,
+    "primary_personas": ["DealSeeker", "Loyalist"],
+    "suppression_notes": "Suppress customers who purchased this SKU at full price in last 60 days. Apply standard 3-day fatigue guard."
+  },
+  "limited_allocation": {
+    "default_channels": ["email"],
+    "budget_range": "$0–200 (organic only)",
+    "primary_kpis": ["conversion_rate", "units_sold", "revenue_per_send"],
+    "send_cadence": "Single send to priority list. No follow-up — allocation sells itself. Auto-cancel remaining sends when stock depletes.",
+    "tone_angle": "Scarcity and exclusivity. Speak to the privilege of access. No discount — the rarity is the value.",
+    "discount": false,
+    "paid": false,
+    "primary_personas": ["Collector", "Loyalist"],
+    "suppression_notes": "Send to Collectors and Loyalists only. Auto-cancel queued sends when inventory depletes for the SKU."
+  },
+  "seasonal": {
+    "default_channels": ["email", "paid", "social"],
+    "budget_range": "$500–2,000",
+    "primary_kpis": ["revenue", "units_sold", "paid_roas", "email_conversion_rate"],
+    "send_cadence": "Teaser 1 week before → Launch day → Mid-period reminder → Final day urgency send.",
+    "tone_angle": "Occasion-first framing. Lead with the moment (holiday, season, occasion), then introduce the wine as the perfect complement.",
+    "discount": true,
+    "paid": true,
+    "primary_personas": ["Gifter", "Loyalist", "Explorer"],
+    "suppression_notes": "Do NOT apply post-purchase suppression — seasonal campaigns use gift framing, not personal purchase targeting."
+  },
+  "winback": {
+    "default_channels": ["email"],
+    "budget_range": "$0–100",
+    "primary_kpis": ["reactivation_rate", "orders", "revenue_per_send"],
+    "send_cadence": "Single send only. Never send a second winback email to the same customer within 60 days.",
+    "tone_angle": "Personal and low-pressure. Acknowledge the time gap. Lead with affinity — reference their preferred varietal. Soft offer if discount budget allows.",
+    "discount": true,
+    "paid": false,
+    "primary_personas": ["Loyalist", "DealSeeker"],
+    "suppression_notes": "Target: last_purchase > 90 days, no email in last 14 days. 60-day cooldown between winback emails. Single send only."
+  },
+  "educational": {
+    "default_channels": ["email", "social", "seo"],
+    "budget_range": "$100–300",
+    "primary_kpis": ["email_open_rate", "blog_view_rate", "pdp_view_rate"],
+    "send_cadence": "Single send. SEO content published independently. No urgency — evergreen value.",
+    "tone_angle": "Genuinely educational. Lead with the question the reader has, answer it, then connect naturally to a product. No hard sell.",
+    "discount": false,
+    "paid": false,
+    "primary_personas": ["Explorer", "Collector"],
+    "suppression_notes": "Standard fatigue guard applies. No other suppression overrides."
+  },
+  "bundle": {
+    "default_channels": ["email", "social"],
+    "budget_range": "$200–600",
+    "primary_kpis": ["units_sold", "aov_lift", "conversion_rate"],
+    "send_cadence": "Launch send → Day 5 reminder if no open/click. Optional: target non-openers with different subject line.",
+    "tone_angle": "Value framing — show the savings vs. individual purchase. Curated angle works well: 'We put these together for a reason.'",
+    "discount": true,
+    "paid": false,
+    "primary_personas": ["Gifter", "DealSeeker", "Loyalist"],
+    "suppression_notes": "Suppress customers who already own all SKUs in the bundle. Standard 3-day fatigue guard."
+  },
+  "pre_order": {
+    "default_channels": ["email"],
+    "budget_range": "$0–200",
+    "primary_kpis": ["pre_order_units", "revenue_committed", "conversion_rate"],
+    "send_cadence": "Announcement send → Reminder 1 week before close → Close date final send.",
+    "tone_angle": "Exclusivity and anticipation. 'Be first' framing. Detail the vintage/producer story to justify commitment before tasting.",
+    "discount": false,
+    "paid": false,
+    "primary_personas": ["Collector", "Loyalist"],
+    "suppression_notes": "No special suppression rules. Standard fatigue guard applies."
+  }
+}

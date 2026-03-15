@@ -1,0 +1,126 @@
+[
+  {
+    "id": "asset-001",
+    "campaign_id": "camp-001",
+    "channel": "email",
+    "asset_type": "subject_line",
+    "content": "Save 15% on our best Bordeaux \u2014 clearance pricing starts now",
+    "variant": "A",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-002",
+    "campaign_id": "camp-001",
+    "channel": "email",
+    "asset_type": "subject_line",
+    "content": "We have too much Bordeaux. That's your gain.",
+    "variant": "B",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-003",
+    "campaign_id": "camp-001",
+    "channel": "email",
+    "asset_type": "email_body",
+    "content": "Spring is here, and our Bordeaux cellar is overflowing. We're offering 15% off our finest Bordeaux blends \u2014 rich, complex, and ready to drink now or cellar for years. These won't last long at this price.",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-004",
+    "campaign_id": "camp-001",
+    "channel": "email",
+    "asset_type": "cta_text",
+    "content": "Shop the Bordeaux Clearance",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-005",
+    "campaign_id": "camp-001",
+    "channel": "paid",
+    "asset_type": "ad_headline",
+    "content": "Bordeaux Clearance \u2014 15% Off",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-006",
+    "campaign_id": "camp-001",
+    "channel": "social",
+    "asset_type": "social_caption",
+    "content": "Spring clearance has arrived. Our finest Bordeaux blends, now 15% off. Cassis, cedar, and complexity at a price that shouldn't exist. Link in bio. #BordeauxLovers #WineSale #SpringWine",
+    "status": "approved",
+    "created_at": "2026-01-25",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "asset-020",
+    "campaign_id": "camp-006",
+    "channel": "email",
+    "asset_type": "subject_line",
+    "content": "Only 27 bottles remain \u2014 Barolo Reserve",
+    "variant": "A",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  },
+  {
+    "id": "asset-021",
+    "campaign_id": "camp-006",
+    "channel": "email",
+    "asset_type": "subject_line",
+    "content": "This Barolo is almost gone. Here's why that matters.",
+    "variant": "B",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  },
+  {
+    "id": "asset-022",
+    "campaign_id": "camp-006",
+    "channel": "email",
+    "asset_type": "email_body",
+    "content": "We received one final allocation of our 2021 Barolo Reserve \u2014 just 27 bottles. This is a wine of extraordinary depth: dried rose petals, tar, and mountain cherry. It's ready now with a good decant, and will age magnificently for 15+ years.",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  },
+  {
+    "id": "asset-023",
+    "campaign_id": "camp-006",
+    "channel": "email",
+    "asset_type": "cta_text",
+    "content": "Reserve Your Bottles Now",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  },
+  {
+    "id": "asset-024",
+    "campaign_id": "camp-006",
+    "channel": "paid",
+    "asset_type": "ad_headline",
+    "content": "Final Allocation: 2021 Barolo Reserve",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  },
+  {
+    "id": "asset-025",
+    "campaign_id": "camp-006",
+    "channel": "social",
+    "asset_type": "social_caption",
+    "content": "27 bottles. That's all we have left of our 2021 Barolo Reserve. Tar, dried roses, and a finish that goes on forever. If Barolo is your thing \u2014 this is the one. Link in bio. #Barolo #Nebbiolo #FineWine #LimitedAllocation",
+    "status": "approved",
+    "created_at": "2026-03-05",
+    "approved_at": "2026-03-06"
+  }
+]

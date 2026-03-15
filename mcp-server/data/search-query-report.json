@@ -1,0 +1,107 @@
+{
+  "period_days": 30,
+  "total_searches": 824,
+  "search_to_purchase_rate": 0.048,
+  "top_queries": [
+    {
+      "query": "barolo",
+      "count": 68,
+      "click_through_rate": 0.82,
+      "add_to_cart_rate": 0.34,
+      "purchase_rate": 0.12
+    },
+    {
+      "query": "natural wine",
+      "count": 54,
+      "click_through_rate": 0.74,
+      "add_to_cart_rate": 0.22,
+      "purchase_rate": 0.07
+    },
+    {
+      "query": "bordeaux",
+      "count": 48,
+      "click_through_rate": 0.79,
+      "add_to_cart_rate": 0.28,
+      "purchase_rate": 0.09
+    },
+    {
+      "query": "wine under 50",
+      "count": 42,
+      "click_through_rate": 0.68,
+      "add_to_cart_rate": 0.31,
+      "purchase_rate": 0.11
+    },
+    {
+      "query": "gift wine",
+      "count": 38,
+      "click_through_rate": 0.61,
+      "add_to_cart_rate": 0.18,
+      "purchase_rate": 0.06
+    },
+    {
+      "query": "pinot noir",
+      "count": 36,
+      "click_through_rate": 0.77,
+      "add_to_cart_rate": 0.25,
+      "purchase_rate": 0.08
+    },
+    {
+      "query": "champagne",
+      "count": 32,
+      "click_through_rate": 0.71,
+      "add_to_cart_rate": 0.2,
+      "purchase_rate": 0.07
+    },
+    {
+      "query": "ros\u00e9 wine",
+      "count": 28,
+      "click_through_rate": 0.66,
+      "add_to_cart_rate": 0.24,
+      "purchase_rate": 0.09
+    },
+    {
+      "query": "chardonnay",
+      "count": 24,
+      "click_through_rate": 0.73,
+      "add_to_cart_rate": 0.19,
+      "purchase_rate": 0.06
+    },
+    {
+      "query": "syrah",
+      "count": 18,
+      "click_through_rate": 0.69,
+      "add_to_cart_rate": 0.22,
+      "purchase_rate": 0.08
+    }
+  ],
+  "zero_result_queries": [
+    {
+      "query": "natural orange wine",
+      "count": 22
+    },
+    {
+      "query": "biodynamic jura savagnin",
+      "count": 12
+    },
+    {
+      "query": "1990 bordeaux futures",
+      "count": 8
+    },
+    {
+      "query": "orange wine skin contact",
+      "count": 18
+    }
+  ],
+  "low_result_queries": [
+    {
+      "query": "vintage 2010 burgundy",
+      "count": 14,
+      "result_count": 2
+    },
+    {
+      "query": "amphora wine",
+      "count": 10,
+      "result_count": 1
+    }
+  ]
+}

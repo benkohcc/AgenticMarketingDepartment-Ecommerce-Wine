@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wine-marketing-mcp": {
+      "type": "http",
+      "url": "YOUR_TUNNEL_URL/mcp"
+    }
+  }
+}

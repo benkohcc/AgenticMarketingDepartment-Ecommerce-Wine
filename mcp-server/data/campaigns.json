@@ -1,0 +1,162 @@
+[
+  {
+    "id": "camp-001",
+    "name": "Bordeaux Spring Clearance",
+    "campaign_type": "promotion",
+    "status": "COMPLETED",
+    "channels": [
+      "email",
+      "paid",
+      "social"
+    ],
+    "target_segment_ids": [
+      "seg-008",
+      "seg-001"
+    ],
+    "featured_sku_ids": [
+      "SKU-042"
+    ],
+    "discount_pct": 15,
+    "start_date": "2026-01-28",
+    "end_date": "2026-02-11",
+    "created_at": "2026-01-23",
+    "updated_at": "2026-02-11",
+    "approved_by": "human",
+    "approved_at": "2026-01-24"
+  },
+  {
+    "id": "camp-002",
+    "name": "2024 Barolo Pre-Order",
+    "campaign_type": "pre_order",
+    "status": "COMPLETED",
+    "channels": [
+      "email",
+      "social"
+    ],
+    "target_segment_ids": [
+      "seg-011",
+      "seg-005"
+    ],
+    "featured_sku_ids": [
+      "SKU-031"
+    ],
+    "discount_pct": 0,
+    "start_date": "2025-12-14",
+    "end_date": "2025-12-28",
+    "created_at": "2025-12-09",
+    "updated_at": "2025-12-28",
+    "approved_by": "human",
+    "approved_at": "2025-12-10"
+  },
+  {
+    "id": "camp-003",
+    "name": "Holiday Gifting 2024",
+    "campaign_type": "seasonal",
+    "status": "COMPLETED",
+    "channels": [
+      "email",
+      "paid",
+      "social"
+    ],
+    "target_segment_ids": [
+      "seg-003",
+      "seg-010"
+    ],
+    "featured_sku_ids": [
+      "SKU-009",
+      "SKU-058"
+    ],
+    "discount_pct": 10,
+    "start_date": "2025-11-14",
+    "end_date": "2025-12-04",
+    "created_at": "2025-11-09",
+    "updated_at": "2025-12-04",
+    "approved_by": "human",
+    "approved_at": "2025-11-10"
+  },
+  {
+    "id": "camp-004",
+    "name": "Natural Wine Discovery",
+    "campaign_type": "educational",
+    "status": "COMPLETED",
+    "channels": [
+      "email",
+      "social",
+      "seo"
+    ],
+    "target_segment_ids": [
+      "seg-002",
+      "seg-009"
+    ],
+    "featured_sku_ids": [],
+    "discount_pct": 0,
+    "start_date": "2025-12-29",
+    "end_date": "2026-01-12",
+    "created_at": "2025-12-24",
+    "updated_at": "2026-01-12",
+    "approved_by": "human",
+    "approved_at": "2025-12-25"
+  },
+  {
+    "id": "camp-005",
+    "name": "Spring Natural Wine Content",
+    "campaign_type": "educational",
+    "status": "ACTIVE",
+    "channels": [
+      "email",
+      "social",
+      "seo"
+    ],
+    "target_segment_ids": [
+      "seg-002",
+      "seg-007"
+    ],
+    "featured_sku_ids": [],
+    "discount_pct": 0,
+    "start_date": "2026-02-28",
+    "end_date": "2026-03-28",
+    "created_at": "2026-02-24",
+    "updated_at": "2026-02-28",
+    "approved_by": "human",
+    "approved_at": "2026-02-25"
+  },
+  {
+    "id": "camp-006",
+    "name": "Barolo Reserve Campaign",
+    "campaign_type": "limited_allocation",
+    "status": "ACTIVE",
+    "channels": [
+      "email",
+      "paid",
+      "social"
+    ],
+    "target_segment_ids": [
+      "seg-011",
+      "seg-005",
+      "seg-010"
+    ],
+    "featured_sku_ids": [
+      "SKU-031"
+    ],
+    "discount_pct": 0,
+    "start_date": "2026-03-07",
+    "end_date": "2026-03-21",
+    "created_at": "2026-03-04",
+    "updated_at": "2026-03-07",
+    "approved_by": "human",
+    "approved_at": "2026-03-05",
+    "boost_config": {
+      "sku_ids": [
+        "SKU-031"
+      ],
+      "boost_factor": 1.5,
+      "contexts": [
+        "homepage",
+        "collection",
+        "email",
+        "pdp"
+      ],
+      "expires_at": "2026-03-21"
+    }
+  }
+]

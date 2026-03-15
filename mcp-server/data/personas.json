@@ -1,0 +1,83 @@
+[
+  {
+    "id": "Explorer",
+    "name": "The Explorer",
+    "demographics": "Adults 28–42, urban/suburban, $75k–$150k income",
+    "purchase_behavior": "1–3 bottles, 6–10 times/year, AOV $35–75",
+    "what_they_respond_to": "Region storytelling, winemaker profiles, food pairing, 'what to try next' framing",
+    "acquisition_channels": ["organic_search", "referral", "paid_social"],
+    "campaign_type_fit": ["new_arrival", "educational", "seasonal"],
+    "segment_signals": [
+      "High pdp_view count relative to purchase count",
+      "blog_view events in session history",
+      "Varietal or region-specific search queries",
+      "Low purchase frequency despite high site engagement"
+    ],
+    "tone_guidance": "Lead with discovery and story. Educational content converts well — they want to learn something. Use sensory language and winemaker/vineyard context. Avoid hard-sell or urgency framing."
+  },
+  {
+    "id": "Gifter",
+    "name": "The Gifter",
+    "demographics": "Adults 35–55, suburban, $80k–$160k income, purchases spike Nov–Dec and around key dates",
+    "purchase_behavior": "2–4 purchases/year, AOV $60–100, prefers gift sets or well-packaged bottles, often ships to a different address",
+    "what_they_respond_to": "Gift suitability cues, occasion framing (birthday, anniversary, corporate), clear value and packaging quality, fast/reliable shipping emphasis",
+    "acquisition_channels": ["paid_search", "email", "direct"],
+    "campaign_type_fit": ["seasonal", "bundle", "new_arrival"],
+    "segment_signals": [
+      "Purchase history in Nov/Dec or around Valentine's/Mother's Day",
+      "Ships to multiple addresses",
+      "Selects gift wrap or gift note at checkout",
+      "Short browse-to-purchase sessions (goal-oriented)"
+    ],
+    "tone_guidance": "Occasion-forward framing. Lead with the recipient and the moment, not the wine. Emphasize presentation and reliability. Keep copy concise and direct — Gifters are on a mission, not browsing."
+  },
+  {
+    "id": "Loyalist",
+    "name": "The Loyalist",
+    "demographics": "Adults 38–60, any geography, $90k–$200k income, long customer tenure",
+    "purchase_behavior": "6+ orders/year, AOV $50–90, strong varietal/producer preferences, high email engagement",
+    "what_they_respond_to": "Exclusive access, new vintages from known producers, loyalty recognition, early access to limited stock, being treated as an insider",
+    "acquisition_channels": ["email", "direct"],
+    "campaign_type_fit": ["new_arrival", "limited_allocation", "bundle", "pre_order"],
+    "segment_signals": [
+      "RFM Champions or Loyal Customers segment",
+      "Email open rate > 35%",
+      "Purchases repeat SKUs or same producer across vintages",
+      "CLV > $600"
+    ],
+    "tone_guidance": "Speak to them as a trusted insider. Acknowledge their loyalty subtly — 'As one of our most engaged customers...' Avoid generic promotional language. They respond to curation and access, not discounts."
+  },
+  {
+    "id": "DealSeeker",
+    "name": "The Deal Seeker",
+    "demographics": "Adults 30–50, price-sensitive, any income band, high promotion sensitivity",
+    "purchase_behavior": "Purchases cluster around discount events, AOV $30–60, likely to buy multiples when discounted, low base purchase frequency",
+    "what_they_respond_to": "Clear discount percentages, limited-time offers, savings framing ('Save $X'), bundle deals, free shipping thresholds",
+    "acquisition_channels": ["email", "paid_search", "paid_social"],
+    "campaign_type_fit": ["promotion", "bundle"],
+    "segment_signals": [
+      "seg-deal-seekers segment membership",
+      "Purchase history limited to promotion periods",
+      "High email click rate on discount subject lines",
+      "Abandoned carts when no promotion code applied"
+    ],
+    "tone_guidance": "Lead with the offer — savings first, story second. Use concrete numbers ('15% off', '$12 savings'). Urgency and scarcity language is appropriate here (unlike other personas). Avoid premium/collector positioning."
+  },
+  {
+    "id": "Collector",
+    "name": "The Collector",
+    "demographics": "Adults 40–65, high income $150k+, often in major metro areas, deep wine knowledge",
+    "purchase_behavior": "3–8 orders/year, AOV $100–250+, purchases premium/collector-tier SKUs, may buy by the case, long consideration windows",
+    "what_they_respond_to": "Provenance and terroir detail, vintage specifics, critic scores, cellaring potential, winemaker philosophy, allocation scarcity",
+    "acquisition_channels": ["direct", "email", "referral"],
+    "campaign_type_fit": ["limited_allocation", "pre_order", "new_arrival", "educational"],
+    "segment_signals": [
+      "seg-collectors segment membership",
+      "Purchased SKUs priced > $120",
+      "CLV > $1,200",
+      "Long session duration on PDP pages",
+      "Reads tasting notes and technical details"
+    ],
+    "tone_guidance": "Match their expertise level. Use technical detail when appropriate (vintage conditions, terroir). Never talk down or over-explain basics. Scarcity is more powerful than discount — never discount collector SKUs. Prestige framing works."
+  }
+]

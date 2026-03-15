@@ -1,0 +1,55 @@
+{
+  "global_unsubscribe": {
+    "rule": "Never email customers on the global unsubscribe list under any circumstances.",
+    "check": "Call get_suppressions() and filter out any customer with scope: 'global' before any send."
+  },
+  "email_fatigue_guard": {
+    "cooldown_days": 3,
+    "rule": "No more than 1 campaign email per customer per 3-day rolling window.",
+    "check": "Exclude customers who received any campaign email in the last 3 days. Behavioral trigger emails (cart abandon, winback) are exempt from this guard.",
+    "applies_to": ["promotion", "new_arrival", "seasonal", "bundle", "educational", "limited_allocation", "pre_order"]
+  },
+  "post_purchase_suppression": {
+    "expiry_days": 30,
+    "rule": "Add customer to campaign-scoped suppression after they purchase via the campaign. Suppression expires after 30 days.",
+    "check": "Check for campaign-scoped suppression record before sending Day-3 and Day-7 follow-ups.",
+    "applies_to": ["promotion", "bundle", "new_arrival"],
+    "exceptions": ["seasonal"]
+  },
+  "winback_cooldown": {
+    "cooldown_days": 60,
+    "rule": "60-day cooldown between winback emails per customer. Never send a second winback email within this window.",
+    "check": "Check last winback send date for customer before triggering. Call is_suppressed() before each winback trigger."
+  },
+  "campaign_scoped_suppression": {
+    "rule": "Customers who purchased a campaign SKU at full price in the last 60 days are excluded from promotional campaigns for that SKU.",
+    "check": "For promotion-type campaigns: exclude customers whose last purchase of the featured SKU was at full price within 60 days."
+  },
+  "invalid_email_filter": {
+    "rule": "Never send to customers where email_valid == false.",
+    "check": "Always filter out email_valid: false records before resolving target audience."
+  },
+  "per_type_overrides": {
+    "seasonal": {
+      "post_purchase_suppression": "DISABLED — seasonal campaigns use gift framing, not personal purchase targeting. A buyer may intend to buy again for a different recipient.",
+      "fatigue_guard": "Standard 3-day guard applies"
+    },
+    "winback": {
+      "send_limit": "Single send only per customer per 60-day window. Never queue a second winback.",
+      "fatigue_guard": "Standard guard applies but winback sends count toward it"
+    },
+    "limited_allocation": {
+      "auto_cancel": "Auto-cancel all queued sends when inventory for the SKU depletes to 0.",
+      "fatigue_guard": "Standard guard applies"
+    },
+    "educational": {
+      "post_purchase_suppression": "DISABLED — educational content is not purchase-triggered",
+      "fatigue_guard": "Standard guard applies"
+    }
+  },
+  "trigger_email_exemptions": {
+    "cart_abandon": "Exempt from 3-day fatigue guard. Fire if > 45 minutes since abandon and customer has not yet purchased.",
+    "browse_abandon": "Exempt from 3-day fatigue guard. Fire if customer viewed PDP 3+ times in 7 days with no purchase.",
+    "winback_trigger": "Subject to 60-day winback cooldown. Not exempt from global unsubscribe."
+  }
+}

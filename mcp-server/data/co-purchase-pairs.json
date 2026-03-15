@@ -1,0 +1,140 @@
+[
+  {
+    "sku_id_a": "SKU-031",
+    "sku_id_b": "SKU-058",
+    "co_purchase_rate": 0.44,
+    "lift": 3.8
+  },
+  {
+    "sku_id_a": "SKU-042",
+    "sku_id_b": "SKU-017",
+    "co_purchase_rate": 0.31,
+    "lift": 2.9
+  },
+  {
+    "sku_id_a": "SKU-009",
+    "sku_id_b": "SKU-058",
+    "co_purchase_rate": 0.28,
+    "lift": 2.4
+  },
+  {
+    "sku_id_a": "SKU-104",
+    "sku_id_b": "SKU-053",
+    "co_purchase_rate": 0.173,
+    "lift": 2.9
+  },
+  {
+    "sku_id_a": "SKU-081",
+    "sku_id_b": "SKU-110",
+    "co_purchase_rate": 0.25,
+    "lift": 4.2
+  },
+  {
+    "sku_id_a": "SKU-018",
+    "sku_id_b": "SKU-013",
+    "co_purchase_rate": 0.183,
+    "lift": 3.1
+  },
+  {
+    "sku_id_a": "SKU-025",
+    "sku_id_b": "SKU-070",
+    "co_purchase_rate": 0.193,
+    "lift": 3.2
+  },
+  {
+    "sku_id_a": "SKU-080",
+    "sku_id_b": "SKU-098",
+    "co_purchase_rate": 0.149,
+    "lift": 2.5
+  },
+  {
+    "sku_id_a": "SKU-072",
+    "sku_id_b": "SKU-018",
+    "co_purchase_rate": 0.146,
+    "lift": 2.4
+  },
+  {
+    "sku_id_a": "SKU-023",
+    "sku_id_b": "SKU-102",
+    "co_purchase_rate": 0.173,
+    "lift": 2.9
+  },
+  {
+    "sku_id_a": "SKU-029",
+    "sku_id_b": "SKU-018",
+    "co_purchase_rate": 0.183,
+    "lift": 3.1
+  },
+  {
+    "sku_id_a": "SKU-068",
+    "sku_id_b": "SKU-100",
+    "co_purchase_rate": 0.085,
+    "lift": 1.4
+  },
+  {
+    "sku_id_a": "SKU-083",
+    "sku_id_b": "SKU-050",
+    "co_purchase_rate": 0.175,
+    "lift": 2.9
+  },
+  {
+    "sku_id_a": "SKU-101",
+    "sku_id_b": "SKU-045",
+    "co_purchase_rate": 0.305,
+    "lift": 5.1
+  },
+  {
+    "sku_id_a": "SKU-059",
+    "sku_id_b": "SKU-027",
+    "co_purchase_rate": 0.146,
+    "lift": 2.4
+  },
+  {
+    "sku_id_a": "SKU-029",
+    "sku_id_b": "SKU-013",
+    "co_purchase_rate": 0.081,
+    "lift": 1.4
+  },
+  {
+    "sku_id_a": "SKU-108",
+    "sku_id_b": "SKU-070",
+    "co_purchase_rate": 0.168,
+    "lift": 2.8
+  },
+  {
+    "sku_id_a": "SKU-051",
+    "sku_id_b": "SKU-067",
+    "co_purchase_rate": 0.123,
+    "lift": 2.1
+  },
+  {
+    "sku_id_a": "SKU-036",
+    "sku_id_b": "SKU-071",
+    "co_purchase_rate": 0.073,
+    "lift": 1.2
+  },
+  {
+    "sku_id_a": "SKU-016",
+    "sku_id_b": "SKU-064",
+    "co_purchase_rate": 0.191,
+    "lift": 3.2
+  },
+  {
+    "sku_id_a": "SKU-003",
+    "sku_id_b": "SKU-001",
+    "co_purchase_rate": 0.123,
+    "lift": 2.1
+  },
+  {
+    "sku_id_a": "SKU-053",
+    "sku_id_b": "SKU-108",
+    "co_purchase_rate": 0.13,
+    "lift": 2.2
+  },
+  {
+    "sku_id_a": "SKU-059",
+    "sku_id_b": "SKU-056",
+    "co_purchase_rate": 0.192,
+    "lift": 3.2
+  }
+]

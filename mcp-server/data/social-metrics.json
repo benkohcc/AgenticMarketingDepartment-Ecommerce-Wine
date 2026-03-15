@@ -1,0 +1,57 @@
+[
+  {
+    "platform": "instagram",
+    "period": "2026-03",
+    "followers": 12400,
+    "follower_delta": 182,
+    "impressions": 88000,
+    "reach": 62000,
+    "engagement_rate": 0.038,
+    "top_posts": [
+      {
+        "post_id": "post-003",
+        "engagement_rate": 0.097
+      }
+    ]
+  },
+  {
+    "platform": "facebook",
+    "period": "2026-03",
+    "followers": 8200,
+    "follower_delta": 64,
+    "impressions": 38000,
+    "reach": 28000,
+    "engagement_rate": 0.021,
+    "top_posts": [
+      {
+        "post_id": "post-002",
+        "engagement_rate": 0.038
+      }
+    ]
+  },
+  {
+    "platform": "pinterest",
+    "period": "2026-03",
+    "followers": 3100,
+    "follower_delta": 48,
+    "impressions": 142000,
+    "reach": 98000,
+    "engagement_rate": 0.055,
+    "top_posts": [
+      {
+        "post_id": "post-004",
+        "engagement_rate": 0.032
+      }
+    ]
+  },
+  {
+    "platform": "tiktok",
+    "period": "2026-03",
+    "followers": 2800,
+    "follower_delta": 92,
+    "impressions": 218000,
+    "reach": 162000,
+    "engagement_rate": 0.082,
+    "top_posts": []
+  }
+]

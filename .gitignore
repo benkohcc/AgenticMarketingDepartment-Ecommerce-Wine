@@ -1,0 +1,17 @@
+# Node
+mcp-server/node_modules/
+mcp-server/dist/
+
+# TLS certs (local dev only)
+mcp-server/localhost+1.pem
+mcp-server/localhost+1-key.pem
+
+# Plugin zip (generated artifact — rebuilt by start-mcp.sh)
+wine-marketing-plugin.zip
+
+# Ephemeral tunnel config — URL changes every ./start-mcp.sh run
+cowork-plugin/.mcp.json
+
+# macOS
+.DS_Store
+**/.DS_Store

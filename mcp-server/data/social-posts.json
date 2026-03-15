@@ -1,0 +1,77 @@
+[
+  {
+    "id": "post-001",
+    "campaign_id": "camp-001",
+    "platform": "instagram",
+    "caption": "Spring clearance has arrived...",
+    "image_url": "https://assets.wineshop.example/camp-001-instagram.jpg",
+    "hashtags": [
+      "BordeauxLovers",
+      "WineSale",
+      "SpringWine"
+    ],
+    "published_at": "2026-01-28",
+    "status": "published",
+    "impressions": 8400,
+    "reach": 6200,
+    "likes": 312,
+    "comments": 28,
+    "shares": 44,
+    "engagement_rate": 0.062
+  },
+  {
+    "id": "post-002",
+    "campaign_id": "camp-001",
+    "platform": "facebook",
+    "caption": "Bordeaux clearance \u2014 15% off.",
+    "hashtags": [],
+    "published_at": "2026-01-28",
+    "status": "published",
+    "impressions": 4200,
+    "reach": 3100,
+    "likes": 88,
+    "comments": 12,
+    "shares": 18,
+    "engagement_rate": 0.038
+  },
+  {
+    "id": "post-003",
+    "campaign_id": "camp-006",
+    "platform": "instagram",
+    "caption": "27 bottles. That's all we have left...",
+    "image_url": "https://assets.wineshop.example/camp-006-instagram.jpg",
+    "hashtags": [
+      "Barolo",
+      "Nebbiolo",
+      "FineWine",
+      "LimitedAllocation"
+    ],
+    "published_at": "2026-03-07",
+    "status": "published",
+    "impressions": 11200,
+    "reach": 8400,
+    "likes": 624,
+    "comments": 82,
+    "shares": 108,
+    "engagement_rate": 0.097
+  },
+  {
+    "id": "post-004",
+    "campaign_id": "camp-006",
+    "platform": "pinterest",
+    "caption": "2021 Barolo Reserve \u2014 only 27 bottles available...",
+    "hashtags": [
+      "Barolo",
+      "ItalianWine",
+      "FineDining"
+    ],
+    "published_at": "2026-03-07",
+    "status": "published",
+    "impressions": 18400,
+    "reach": 14200,
+    "likes": 284,
+    "comments": 14,
+    "shares": 162,
+    "engagement_rate": 0.032
+  }
+]

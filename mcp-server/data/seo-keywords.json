@@ -1,0 +1,92 @@
+[
+  {
+    "id": "kw-001",
+    "keyword": "natural wine online",
+    "intent": "commercial",
+    "monthly_search_volume": 4400,
+    "difficulty_score": 42,
+    "current_ranking_position": 8,
+    "suggested_content_type": "collection_page",
+    "priority": "high",
+    "target_sku_ids": [],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-002",
+    "keyword": "barolo wine buy",
+    "intent": "transactional",
+    "monthly_search_volume": 1900,
+    "difficulty_score": 51,
+    "current_ranking_position": 12,
+    "suggested_content_type": "collection_page",
+    "priority": "high",
+    "target_sku_ids": [
+      "SKU-031"
+    ],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-003",
+    "keyword": "best bordeaux under 50",
+    "intent": "commercial",
+    "monthly_search_volume": 2400,
+    "difficulty_score": 38,
+    "current_ranking_position": 6,
+    "suggested_content_type": "editorial",
+    "priority": "high",
+    "target_sku_ids": [
+      "SKU-042"
+    ],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-004",
+    "keyword": "biodynamic wine",
+    "intent": "informational",
+    "monthly_search_volume": 8100,
+    "difficulty_score": 45,
+    "current_ranking_position": 15,
+    "suggested_content_type": "blog_post",
+    "priority": "medium",
+    "target_sku_ids": [],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-005",
+    "keyword": "wine gift set",
+    "intent": "transactional",
+    "monthly_search_volume": 12000,
+    "difficulty_score": 58,
+    "current_ranking_position": null,
+    "suggested_content_type": "collection_page",
+    "priority": "high",
+    "target_sku_ids": [],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-006",
+    "keyword": "pinot noir under 40",
+    "intent": "commercial",
+    "monthly_search_volume": 1600,
+    "difficulty_score": 32,
+    "current_ranking_position": 9,
+    "suggested_content_type": "collection_page",
+    "priority": "medium",
+    "target_sku_ids": [
+      "SKU-017"
+    ],
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "kw-007",
+    "keyword": "orange wine where to buy",
+    "intent": "transactional",
+    "monthly_search_volume": 880,
+    "difficulty_score": 28,
+    "current_ranking_position": null,
+    "suggested_content_type": "collection_page",
+    "priority": "medium",
+    "target_sku_ids": [],
+    "updated_at": "2026-03-14"
+  }
+]

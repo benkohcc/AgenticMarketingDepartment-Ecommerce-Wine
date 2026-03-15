@@ -1,0 +1,168 @@
+[
+  {
+    "id": "test-001",
+    "name": "Bordeaux PDP Urgency Banner",
+    "page_type": "pdp",
+    "element": "urgency_banner",
+    "campaign_id": "camp-001",
+    "sku_id": "SKU-042",
+    "status": "complete",
+    "primary_metric": "add_to_cart_rate",
+    "traffic_split": 0.5,
+    "min_sample_size": 200,
+    "max_duration_days": 14,
+    "started_at": "2026-01-28",
+    "ended_at": "2026-02-11",
+    "winner": "B",
+    "variants": [
+      {
+        "id": "A",
+        "description": "No urgency banner (control)",
+        "sessions": 410,
+        "primary_metric_value": 0.12,
+        "lift_pct": 0,
+        "p_value": null,
+        "is_significant": false
+      },
+      {
+        "id": "B",
+        "description": "Low stock urgency banner",
+        "sessions": 412,
+        "primary_metric_value": 0.142,
+        "lift_pct": 18.3,
+        "p_value": 0.021,
+        "is_significant": true,
+        "confidence_interval": [
+          0.08,
+          0.29
+        ]
+      }
+    ]
+  },
+  {
+    "id": "test-002",
+    "name": "Barolo Allocation Subject Line",
+    "page_type": "email",
+    "element": "subject_line",
+    "campaign_id": "camp-002",
+    "status": "complete",
+    "primary_metric": "open_rate",
+    "traffic_split": 0.5,
+    "min_sample_size": 80,
+    "max_duration_days": 7,
+    "started_at": "2025-12-14",
+    "ended_at": "2025-12-20",
+    "winner": "B",
+    "variants": [
+      {
+        "id": "A",
+        "description": "Feature-led: 'Only 27 bottles remain'",
+        "sessions": 88,
+        "primary_metric_value": 0.38,
+        "lift_pct": 0
+      },
+      {
+        "id": "B",
+        "description": "Story-led: 'This Barolo is almost gone. Here's why that matters.'",
+        "sessions": 89,
+        "primary_metric_value": 0.452,
+        "lift_pct": 18.9,
+        "p_value": 0.018,
+        "is_significant": true
+      }
+    ]
+  },
+  {
+    "id": "test-003",
+    "name": "Holiday Homepage Hero",
+    "page_type": "homepage",
+    "element": "hero_banner",
+    "campaign_id": "camp-003",
+    "status": "complete",
+    "primary_metric": "collection_click_rate",
+    "traffic_split": 0.5,
+    "min_sample_size": 300,
+    "max_duration_days": 14,
+    "started_at": "2025-11-14",
+    "ended_at": "2025-11-28",
+    "winner": "A",
+    "variants": [
+      {
+        "id": "A",
+        "description": "Product-led: bottle imagery with price",
+        "sessions": 820,
+        "primary_metric_value": 0.082,
+        "lift_pct": 9.4,
+        "p_value": 0.038,
+        "is_significant": true
+      },
+      {
+        "id": "B",
+        "description": "Occasion-led: lifestyle gifting image",
+        "sessions": 818,
+        "primary_metric_value": 0.075
+      }
+    ]
+  },
+  {
+    "id": "test-004",
+    "name": "Natural Wine Blog CTA Placement",
+    "page_type": "blog",
+    "element": "cta_position",
+    "campaign_id": "camp-005",
+    "status": "running",
+    "primary_metric": "pdp_click_rate",
+    "traffic_split": 0.5,
+    "min_sample_size": 400,
+    "max_duration_days": 21,
+    "started_at": "2026-02-28",
+    "variants": [
+      {
+        "id": "A",
+        "description": "CTA at bottom of article",
+        "sessions": 248,
+        "primary_metric_value": 0.038
+      },
+      {
+        "id": "B",
+        "description": "Inline CTA mid-article + sticky footer",
+        "sessions": 251,
+        "primary_metric_value": 0.052,
+        "lift_pct": 36.8,
+        "p_value": 0.089,
+        "is_significant": false
+      }
+    ]
+  },
+  {
+    "id": "test-005",
+    "name": "Barolo PDP Stock Counter",
+    "page_type": "pdp",
+    "element": "stock_counter",
+    "campaign_id": "camp-006",
+    "sku_id": "SKU-031",
+    "status": "running",
+    "primary_metric": "add_to_cart_rate",
+    "traffic_split": 0.5,
+    "min_sample_size": 150,
+    "max_duration_days": 14,
+    "started_at": "2026-03-07",
+    "variants": [
+      {
+        "id": "A",
+        "description": "Static text: 'Limited stock'",
+        "sessions": 58,
+        "primary_metric_value": 0.38
+      },
+      {
+        "id": "B",
+        "description": "Live counter: '27 bottles left'",
+        "sessions": 59,
+        "primary_metric_value": 0.44,
+        "lift_pct": 15.8,
+        "p_value": 0.24,
+        "is_significant": false
+      }
+    ]
+  }
+]

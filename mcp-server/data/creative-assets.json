@@ -1,0 +1,24 @@
+[
+  {
+    "id": "creative-001",
+    "campaign_id": "camp-001",
+    "asset_type": "social_square",
+    "platform": "instagram",
+    "url": "https://assets.wineshop.example/camp-001-instagram.jpg",
+    "alt_text": "Bottles of Bordeaux on a rustic wooden table",
+    "status": "approved",
+    "uploaded_at": "2026-01-26",
+    "approved_at": "2026-01-26"
+  },
+  {
+    "id": "creative-002",
+    "campaign_id": "camp-006",
+    "asset_type": "social_square",
+    "platform": "instagram",
+    "url": "https://assets.wineshop.example/camp-006-instagram.jpg",
+    "alt_text": "Single bottle of Barolo against dark background",
+    "status": "approved",
+    "uploaded_at": "2026-03-06",
+    "approved_at": "2026-03-06"
+  }
+]

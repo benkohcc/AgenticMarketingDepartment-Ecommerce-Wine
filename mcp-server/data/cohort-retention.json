@@ -1,0 +1,98 @@
+[
+  {
+    "cohort": "2025-09",
+    "acquisition_channel": "organic_search",
+    "cohort_size": 142,
+    "retention_by_month": [
+      1.0,
+      0.81,
+      0.609,
+      0.578,
+      0.367,
+      0.3
+    ]
+  },
+  {
+    "cohort": "2025-10",
+    "acquisition_channel": "organic_search",
+    "cohort_size": 158,
+    "retention_by_month": [
+      1.0,
+      0.732,
+      0.623,
+      0.542,
+      0.398,
+      0.247
+    ]
+  },
+  {
+    "cohort": "2025-11",
+    "acquisition_channel": "paid_search",
+    "cohort_size": 210,
+    "retention_by_month": [
+      1.0,
+      0.701,
+      0.628,
+      0.429,
+      0.293,
+      0.163
+    ]
+  },
+  {
+    "cohort": "2025-12",
+    "acquisition_channel": "email",
+    "cohort_size": 88,
+    "retention_by_month": [
+      1.0,
+      0.826,
+      0.65,
+      0.531,
+      0.34,
+      0.277
+    ]
+  },
+  {
+    "cohort": "2026-01",
+    "acquisition_channel": "paid_social",
+    "cohort_size": 124,
+    "retention_by_month": [
+      1.0,
+      0.633,
+      0.447,
+      0.332,
+      0.175
+    ]
+  },
+  {
+    "cohort": "2026-01",
+    "acquisition_channel": "organic_search",
+    "cohort_size": 136,
+    "retention_by_month": [
+      1.0,
+      0.811,
+      0.732,
+      0.536
+    ]
+  },
+  {
+    "cohort": "2026-02",
+    "acquisition_channel": "direct",
+    "cohort_size": 92,
+    "retention_by_month": [
+      1.0,
+      0.885,
+      0.749,
+      0.53
+    ]
+  },
+  {
+    "cohort": "2026-02",
+    "acquisition_channel": "referral",
+    "cohort_size": 68,
+    "retention_by_month": [
+      1.0,
+      0.815,
+      0.672
+    ]
+  }
+]

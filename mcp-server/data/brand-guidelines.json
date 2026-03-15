@@ -1,0 +1,36 @@
+{
+  "voice": "Knowledgeable but approachable. Expert without being snobbish. We speak like a trusted friend who happens to know a lot about wine.",
+  "tone": [
+    "conversational",
+    "second-person ('you', 'your cellar')",
+    "sensory",
+    "specific (name the grape, vintage, region)"
+  ],
+  "style_rules": [
+    "Lead with occasion or story, not product specs",
+    "Use sensory language (taste, smell, texture) before technical terms",
+    "CTAs are direct and specific: 'Shop the Clearance', 'Reserve Your Case', never 'Click here'",
+    "Scarcity is honest, not manufactured \u2014 only use if genuinely limited stock",
+    "Pair suggestions should be specific: 'grilled lamb chops' not 'meat'"
+  ],
+  "prohibited": [
+    "Wine jargon without explanation (terroir, typicity, etc.)",
+    "Superlatives without substance: 'world's best', 'greatest ever'",
+    "Urgency clich\u00e9s: 'act now!', 'limited time!', 'don't miss out!'",
+    "Generic CTAs: 'click here', 'learn more', 'buy now'"
+  ],
+  "cta_examples": [
+    "Shop the Bordeaux Clearance",
+    "Reserve Your Case",
+    "Explore Natural Wines",
+    "Discover This Vintage",
+    "Claim Your Allocation",
+    "Gift a Great Bottle"
+  ],
+  "color_palette": {
+    "primary": "#2D1B3D",
+    "accent": "#C4853A",
+    "neutral": "#F5F0EA",
+    "text": "#1A1A1A"
+  }
+}

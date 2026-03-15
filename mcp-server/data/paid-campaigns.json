@@ -1,0 +1,88 @@
+[
+  {
+    "id": "paid-001",
+    "campaign_id": "camp-001",
+    "platform": "google",
+    "platform_campaign_id": "g-camp-001-shopping",
+    "campaign_type": "shopping",
+    "status": "ended",
+    "start_date": "2026-01-28",
+    "end_date": "2026-02-11",
+    "budget_daily": 50.0,
+    "total_spend": 700.0,
+    "impressions": 28400,
+    "clicks": 842,
+    "ctr": 0.03,
+    "conversions": 24,
+    "cpa": 29.2,
+    "revenue": 4800.0,
+    "roas": 3.8,
+    "sku_ids": [
+      "SKU-042"
+    ]
+  },
+  {
+    "id": "paid-002",
+    "campaign_id": "camp-001",
+    "platform": "meta",
+    "platform_campaign_id": "meta-camp-001-feed",
+    "campaign_type": "social_feed",
+    "status": "ended",
+    "start_date": "2026-01-28",
+    "end_date": "2026-02-11",
+    "budget_daily": 40.0,
+    "total_spend": 560.0,
+    "impressions": 42000,
+    "clicks": 1260,
+    "ctr": 0.03,
+    "conversions": 18,
+    "cpa": 31.1,
+    "revenue": 3200.0,
+    "roas": 2.5,
+    "sku_ids": [
+      "SKU-042"
+    ]
+  },
+  {
+    "id": "paid-003",
+    "campaign_id": "camp-006",
+    "platform": "google",
+    "platform_campaign_id": "g-camp-006-shopping",
+    "campaign_type": "shopping",
+    "status": "active",
+    "start_date": "2026-03-07",
+    "budget_daily": 60.0,
+    "total_spend": 420.0,
+    "impressions": 18200,
+    "clicks": 624,
+    "ctr": 0.034,
+    "conversions": 14,
+    "cpa": 30.0,
+    "revenue": 2800.0,
+    "roas": 4.4,
+    "sku_ids": [
+      "SKU-031"
+    ]
+  },
+  {
+    "id": "paid-004",
+    "campaign_id": "camp-006",
+    "platform": "meta",
+    "platform_campaign_id": "meta-camp-006-feed",
+    "campaign_type": "social_feed",
+    "status": "active",
+    "start_date": "2026-03-07",
+    "budget_daily": 50.0,
+    "total_spend": 350.0,
+    "impressions": 38400,
+    "clicks": 1152,
+    "ctr": 0.03,
+    "conversions": 9,
+    "cpa": 38.9,
+    "revenue": 2100.0,
+    "roas": 2.9,
+    "sku_ids": [
+      "SKU-031"
+    ]
+  }
+]

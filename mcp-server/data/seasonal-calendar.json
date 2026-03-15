@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Valentine's Day",
+    "start_date": "2026-02-07",
+    "end_date": "2026-02-14",
+    "campaign_type": "seasonal",
+    "notes": "Gifting, Ros\u00e9, Sparkling focus. 2 weeks lead time."
+  },
+  {
+    "name": "Spring Clearance",
+    "start_date": "2026-03-15",
+    "end_date": "2026-04-15",
+    "campaign_type": "promotion",
+    "notes": "Clear winter inventory. Bordeaux, Rh\u00f4ne, and heavy reds."
+  },
+  {
+    "name": "Summer Ros\u00e9 Season",
+    "start_date": "2026-05-01",
+    "end_date": "2026-07-31",
+    "campaign_type": "seasonal",
+    "notes": "Ros\u00e9, Sparkling, and light whites. Extended campaign window."
+  },
+  {
+    "name": "Harvest Season",
+    "start_date": "2026-09-01",
+    "end_date": "2026-10-31",
+    "campaign_type": "educational",
+    "notes": "Vineyard story content. New vintage pre-orders."
+  },
+  {
+    "name": "Pre-Holiday Gifting",
+    "start_date": "2026-11-01",
+    "end_date": "2026-11-25",
+    "campaign_type": "seasonal",
+    "notes": "Gift sets, bundles, corporate gifting. Sparkling and premium tiers."
+  },
+  {
+    "name": "Holiday Peak",
+    "start_date": "2026-11-26",
+    "end_date": "2026-12-24",
+    "campaign_type": "seasonal",
+    "notes": "Maximum email cadence. All channels active. Gift focus."
+  },
+  {
+    "name": "New Year Sparkling",
+    "start_date": "2026-12-26",
+    "end_date": "2026-12-31",
+    "campaign_type": "seasonal",
+    "notes": "Champagne and quality sparkling. Urgency window."
+  }
+]

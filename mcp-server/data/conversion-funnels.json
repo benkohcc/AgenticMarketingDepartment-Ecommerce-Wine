@@ -1,0 +1,450 @@
+[
+  {
+    "device_type": "desktop",
+    "traffic_source": null,
+    "overall_conversion_rate": 0.061,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 8200,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 144
+      },
+      {
+        "step": "collection_view",
+        "sessions": 5904,
+        "completion_rate": 0.72,
+        "drop_off_rate": 0.28,
+        "avg_time_seconds": 142
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 3778,
+        "completion_rate": 0.64,
+        "drop_off_rate": 0.36,
+        "avg_time_seconds": 40
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 1435,
+        "completion_rate": 0.38,
+        "drop_off_rate": 0.62,
+        "avg_time_seconds": 54
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 1033,
+        "completion_rate": 0.72,
+        "drop_off_rate": 0.28,
+        "avg_time_seconds": 180
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 816,
+        "completion_rate": 0.79,
+        "drop_off_rate": 0.21,
+        "avg_time_seconds": 108
+      },
+      {
+        "step": "purchase",
+        "sessions": 807,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 100
+      }
+    ]
+  },
+  {
+    "device_type": "mobile",
+    "traffic_source": null,
+    "overall_conversion_rate": 0.032,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 6800,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 50
+      },
+      {
+        "step": "collection_view",
+        "sessions": 4148,
+        "completion_rate": 0.61,
+        "drop_off_rate": 0.39,
+        "avg_time_seconds": 46
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 2405,
+        "completion_rate": 0.58,
+        "drop_off_rate": 0.42,
+        "avg_time_seconds": 66
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 673,
+        "completion_rate": 0.28,
+        "drop_off_rate": 0.72,
+        "avg_time_seconds": 127
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 255,
+        "completion_rate": 0.38,
+        "drop_off_rate": 0.62,
+        "avg_time_seconds": 121
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 181,
+        "completion_rate": 0.71,
+        "drop_off_rate": 0.29,
+        "avg_time_seconds": 16
+      },
+      {
+        "step": "purchase",
+        "sessions": 179,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 77
+      }
+    ]
+  },
+  {
+    "device_type": "tablet",
+    "traffic_source": null,
+    "overall_conversion_rate": 0.048,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 1200,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 136
+      },
+      {
+        "step": "collection_view",
+        "sessions": 816,
+        "completion_rate": 0.68,
+        "drop_off_rate": 0.32,
+        "avg_time_seconds": 102
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 505,
+        "completion_rate": 0.62,
+        "drop_off_rate": 0.38,
+        "avg_time_seconds": 88
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 171,
+        "completion_rate": 0.34,
+        "drop_off_rate": 0.66,
+        "avg_time_seconds": 144
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 99,
+        "completion_rate": 0.58,
+        "drop_off_rate": 0.42,
+        "avg_time_seconds": 58
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 75,
+        "completion_rate": 0.76,
+        "drop_off_rate": 0.24,
+        "avg_time_seconds": 36
+      },
+      {
+        "step": "purchase",
+        "sessions": 74,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 83
+      }
+    ]
+  },
+  {
+    "device_type": null,
+    "traffic_source": "email",
+    "overall_conversion_rate": 0.082,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 2100,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 110
+      },
+      {
+        "step": "collection_view",
+        "sessions": 1722,
+        "completion_rate": 0.82,
+        "drop_off_rate": 0.18,
+        "avg_time_seconds": 121
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 1274,
+        "completion_rate": 0.74,
+        "drop_off_rate": 0.26,
+        "avg_time_seconds": 107
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 662,
+        "completion_rate": 0.52,
+        "drop_off_rate": 0.48,
+        "avg_time_seconds": 176
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 516,
+        "completion_rate": 0.78,
+        "drop_off_rate": 0.22,
+        "avg_time_seconds": 77
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 423,
+        "completion_rate": 0.82,
+        "drop_off_rate": 0.18,
+        "avg_time_seconds": 53
+      },
+      {
+        "step": "purchase",
+        "sessions": 418,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 150
+      }
+    ]
+  },
+  {
+    "device_type": null,
+    "traffic_source": "organic_search",
+    "overall_conversion_rate": 0.049,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 4800,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 122
+      },
+      {
+        "step": "collection_view",
+        "sessions": 3408,
+        "completion_rate": 0.71,
+        "drop_off_rate": 0.29,
+        "avg_time_seconds": 73
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 2112,
+        "completion_rate": 0.62,
+        "drop_off_rate": 0.38,
+        "avg_time_seconds": 50
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 739,
+        "completion_rate": 0.35,
+        "drop_off_rate": 0.65,
+        "avg_time_seconds": 124
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 502,
+        "completion_rate": 0.68,
+        "drop_off_rate": 0.32,
+        "avg_time_seconds": 120
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 396,
+        "completion_rate": 0.79,
+        "drop_off_rate": 0.21,
+        "avg_time_seconds": 119
+      },
+      {
+        "step": "purchase",
+        "sessions": 392,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 132
+      }
+    ]
+  },
+  {
+    "device_type": null,
+    "traffic_source": "paid_search",
+    "overall_conversion_rate": 0.058,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 3200,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 147
+      },
+      {
+        "step": "collection_view",
+        "sessions": 2176,
+        "completion_rate": 0.68,
+        "drop_off_rate": 0.32,
+        "avg_time_seconds": 107
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 1262,
+        "completion_rate": 0.58,
+        "drop_off_rate": 0.42,
+        "avg_time_seconds": 22
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 403,
+        "completion_rate": 0.32,
+        "drop_off_rate": 0.68,
+        "avg_time_seconds": 128
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 257,
+        "completion_rate": 0.64,
+        "drop_off_rate": 0.36,
+        "avg_time_seconds": 52
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 197,
+        "completion_rate": 0.77,
+        "drop_off_rate": 0.23,
+        "avg_time_seconds": 17
+      },
+      {
+        "step": "purchase",
+        "sessions": 195,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 147
+      }
+    ]
+  },
+  {
+    "device_type": null,
+    "traffic_source": "paid_social",
+    "overall_conversion_rate": 0.032,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 2800,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 32
+      },
+      {
+        "step": "collection_view",
+        "sessions": 1540,
+        "completion_rate": 0.55,
+        "drop_off_rate": 0.45,
+        "avg_time_seconds": 36
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 739,
+        "completion_rate": 0.48,
+        "drop_off_rate": 0.52,
+        "avg_time_seconds": 101
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 177,
+        "completion_rate": 0.24,
+        "drop_off_rate": 0.76,
+        "avg_time_seconds": 95
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 74,
+        "completion_rate": 0.42,
+        "drop_off_rate": 0.58,
+        "avg_time_seconds": 117
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 48,
+        "completion_rate": 0.65,
+        "drop_off_rate": 0.35,
+        "avg_time_seconds": 57
+      },
+      {
+        "step": "purchase",
+        "sessions": 47,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 126
+      }
+    ]
+  },
+  {
+    "device_type": null,
+    "traffic_source": "direct",
+    "overall_conversion_rate": 0.061,
+    "steps": [
+      {
+        "step": "visit",
+        "sessions": 1400,
+        "completion_rate": 1.0,
+        "drop_off_rate": 0,
+        "avg_time_seconds": 30
+      },
+      {
+        "step": "collection_view",
+        "sessions": 1064,
+        "completion_rate": 0.76,
+        "drop_off_rate": 0.24,
+        "avg_time_seconds": 115
+      },
+      {
+        "step": "pdp_view",
+        "sessions": 723,
+        "completion_rate": 0.68,
+        "drop_off_rate": 0.32,
+        "avg_time_seconds": 24
+      },
+      {
+        "step": "add_to_cart",
+        "sessions": 318,
+        "completion_rate": 0.44,
+        "drop_off_rate": 0.56,
+        "avg_time_seconds": 179
+      },
+      {
+        "step": "checkout_start",
+        "sessions": 235,
+        "completion_rate": 0.74,
+        "drop_off_rate": 0.26,
+        "avg_time_seconds": 53
+      },
+      {
+        "step": "checkout_complete",
+        "sessions": 190,
+        "completion_rate": 0.81,
+        "drop_off_rate": 0.19,
+        "avg_time_seconds": 162
+      },
+      {
+        "step": "purchase",
+        "sessions": 188,
+        "completion_rate": 0.99,
+        "drop_off_rate": 0.01,
+        "avg_time_seconds": 29
+      }
+    ]
+  }
+]

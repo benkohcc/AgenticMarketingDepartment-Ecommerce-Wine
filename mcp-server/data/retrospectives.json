@@ -1,0 +1,186 @@
+[
+  {
+    "campaign_id": "camp-001",
+    "campaign_name": "Bordeaux Spring Clearance",
+    "campaign_type": "promotion",
+    "duration_days": 14,
+    "channels_used": [
+      "email",
+      "paid",
+      "social"
+    ],
+    "total_revenue": 18420.0,
+    "total_orders": 142,
+    "overall_roas": 3.2,
+    "channel_breakdown": {
+      "email": {
+        "revenue": 11600,
+        "orders": 89,
+        "roas": 4.2,
+        "open_rate": 0.26,
+        "click_rate": 0.038
+      },
+      "paid": {
+        "revenue": 4800,
+        "spend": 2666,
+        "roas": 1.8,
+        "cpa": 29.8
+      },
+      "social": {
+        "revenue": 2020,
+        "reach": 12400,
+        "engagement_rate": 0.042,
+        "attributed_revenue": 2020
+      }
+    },
+    "best_performing_element": "Email Subject B (curiosity-led) drove 2.1\u00d7 higher open rate vs Subject A",
+    "worst_performing_element": "Paid media underperformed (1.8\u00d7 ROAS vs email 4.2\u00d7) \u2014 consider email-first for promotions",
+    "ab_test_winner": "Subject B: 'We have too much Bordeaux. That's your gain.'",
+    "learnings": [
+      "Email Subject B (curiosity-led) drove 2.1\u00d7 higher open rate than Subject A for Deal Seeker segment",
+      "Day-3 follow-up email drove 34% of total email revenue",
+      "Paid ROAS (1.8\u00d7) significantly underperformed email (4.2\u00d7) for this campaign type",
+      "Social drove 11% of total revenue with minimal spend \u2014 high efficiency channel for clearance"
+    ],
+    "recommendations_for_next_campaign": [
+      "For Bordeaux promotions, lead with email-only in first 5 days before launching paid",
+      "Deal Seeker segment responds to curiosity and value framing \u2014 avoid generic 'sale' language",
+      "Day-3 follow-up is essential \u2014 do not skip it for promotion campaigns"
+    ],
+    "completed_at": "2026-02-11"
+  },
+  {
+    "campaign_id": "camp-002",
+    "campaign_name": "2024 Barolo Pre-Order",
+    "campaign_type": "pre_order",
+    "duration_days": 14,
+    "channels_used": [
+      "email",
+      "social"
+    ],
+    "total_revenue": 24680.0,
+    "total_orders": 68,
+    "overall_roas": 8.1,
+    "channel_breakdown": {
+      "email": {
+        "revenue": 20200,
+        "orders": 55,
+        "roas": 9.2,
+        "open_rate": 0.41,
+        "click_rate": 0.082
+      },
+      "social": {
+        "revenue": 4480,
+        "reach": 8200,
+        "engagement_rate": 0.068,
+        "attributed_revenue": 4480
+      }
+    },
+    "best_performing_element": "Scarcity framing in email drove 41% open rate \u2014 highest in last 12 months",
+    "worst_performing_element": "No paid channel \u2014 missed opportunity to reach lookalike audiences",
+    "ab_test_winner": "Subject B: 'This Barolo is almost gone. Here's why that matters.'",
+    "learnings": [
+      "Limited allocation campaigns achieve 3\u00d7 higher open rates than promotions for Collector and Loyalist segments",
+      "Scarcity framing ('27 bottles remain') outperforms quality framing in subject lines",
+      "No paid channel needed for high-affinity segments \u2014 ROAS naturally high from email alone",
+      "Social organically drove 18% of revenue with high engagement \u2014 Barolo content resonates"
+    ],
+    "recommendations_for_next_campaign": [
+      "Always lead limited allocation campaigns with email 48 hours before any social or paid",
+      "Include exact bottle count in subject line for maximum urgency",
+      "Test adding Google Shopping for Barolo searches \u2014 high-intent audience not yet captured"
+    ],
+    "completed_at": "2025-12-28"
+  },
+  {
+    "campaign_id": "camp-003",
+    "campaign_name": "Holiday Gifting 2024",
+    "campaign_type": "seasonal",
+    "duration_days": 20,
+    "channels_used": [
+      "email",
+      "paid",
+      "social"
+    ],
+    "total_revenue": 31200.0,
+    "total_orders": 218,
+    "overall_roas": 2.8,
+    "channel_breakdown": {
+      "email": {
+        "revenue": 14400,
+        "orders": 101,
+        "roas": 3.6,
+        "open_rate": 0.22,
+        "click_rate": 0.031
+      },
+      "paid": {
+        "revenue": 11200,
+        "spend": 5600,
+        "roas": 2.0,
+        "cpa": 25.5
+      },
+      "social": {
+        "revenue": 5600,
+        "reach": 28000,
+        "engagement_rate": 0.031,
+        "attributed_revenue": 5600
+      }
+    },
+    "best_performing_element": "Pinterest drove 2\u00d7 higher attributed revenue per post vs Instagram for gifting content",
+    "worst_performing_element": "Email open rate low (22%) \u2014 Gifter segment less email-engaged than other personas",
+    "learnings": [
+      "Pinterest is the highest-ROI social channel for seasonal gifting campaigns",
+      "Gifter segment has lower email engagement \u2014 supplement with paid social earlier in campaign",
+      "Bundle offer ('buy 2 get gift bag') drove 28% of orders \u2014 include in all seasonal campaigns"
+    ],
+    "recommendations_for_next_campaign": [
+      "Increase Pinterest budget allocation for holiday seasonal campaigns",
+      "Lead with social and paid for Gifter segment \u2014 email as supporting channel only",
+      "Always include a gift bundle option for seasonal/gifting campaigns"
+    ],
+    "completed_at": "2025-12-04"
+  },
+  {
+    "campaign_id": "camp-004",
+    "campaign_name": "Natural Wine Discovery",
+    "campaign_type": "educational",
+    "duration_days": 14,
+    "channels_used": [
+      "email",
+      "social",
+      "seo"
+    ],
+    "total_revenue": 8640.0,
+    "total_orders": 72,
+    "overall_roas": 5.4,
+    "channel_breakdown": {
+      "email": {
+        "revenue": 5200,
+        "orders": 43,
+        "roas": 6.8,
+        "open_rate": 0.31,
+        "click_rate": 0.055
+      },
+      "social": {
+        "revenue": 2400,
+        "reach": 9200,
+        "engagement_rate": 0.052,
+        "attributed_revenue": 2400
+      }
+    },
+    "best_performing_element": "Long-form Instagram carousel (10 slides explaining natural wine) drove highest engagement of any campaign",
+    "worst_performing_element": "SEO content took 3+ weeks to rank \u2014 not attributable within campaign window",
+    "learnings": [
+      "Educational campaigns have high organic efficiency but long attribution windows",
+      "Explorer segment responds strongly to story and education \u2014 long-form content works",
+      "Natural wine content has 5\u00d7 higher share rate than product promotion content",
+      "SEO content from this campaign continued driving organic traffic for 3+ months post-campaign"
+    ],
+    "recommendations_for_next_campaign": [
+      "Plan educational/SEO campaigns 6-8 weeks before peak season for organic benefit",
+      "Invest in high-production Instagram carousels for Explorer segment campaigns",
+      "Track 90-day attribution window for educational campaigns, not just 14-day"
+    ],
+    "completed_at": "2026-01-12"
+  }
+]
