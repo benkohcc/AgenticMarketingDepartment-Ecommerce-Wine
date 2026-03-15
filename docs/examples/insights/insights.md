@@ -20,9 +20,11 @@ One prompt. The skill immediately connects to the MCP and loads:
 - **500 CLV estimates** — 12-month lifetime value projections
 - **100 churn risk records** — the highest-risk customers (score > 0.98) pulled from the full 305-member churn segment
 
-The full dataset is 1,000 customers. The skill uses `jq` to extract aggregate statistics efficiently from the raw MCP response rather than processing every record inline — a practical choice that keeps the analysis fast without losing the population-level signal.
+The full dataset is 1,000 customers. The MCP returned files rather than inline data for the larger responses — so the skill used Python scripts via bash to parse and aggregate the raw data efficiently, computing averages, distributions, and persona splits without reading tens of thousands of lines directly.
 
-Before touching a single finding, the skill lays out its plan: seven steps in sequence — load data, refresh RFM distribution, update CLV tiers, compute churn risk by persona, rebuild segment membership counts, surface key findings, write reports and queue campaign requests. The plan makes the analysis transparent and auditable: you can see exactly what the skill intends to do before it does it.
+Before pulling any customer data, the skill does two things first: checks the queue for already-pending campaign requests (to avoid writing duplicates) and loads the persona definitions so every segment can be mapped to its archetype — Explorer, Gifter, Loyalist, Collector, DealSeeker — before the analysis begins.
+
+Then the seven-step plan: load data, refresh RFM distribution, update CLV tiers, compute churn risk by persona, rebuild segment membership counts, surface key findings, write reports and queue campaign requests. The plan is laid out before execution begins — the analysis is transparent and auditable at every step.
 
 ---
 
@@ -32,9 +34,13 @@ Before touching a single finding, the skill lays out its plan: seven steps in se
 
 Five findings surface, each tagged by urgency:
 
-**🔴 Churn Risk is at 30.5% of base** — 305 customers in seg-012 (score > 0.70) are deeply disengaged, all with zero recent purchases. The top 100 score above 0.98. The most urgent recovery targets aren't the biggest group — they're the 3 **Loyalist-persona** customers, followed by 8 high-CLV Gifters (CLV > $200), who have a natural re-engagement hook: Mother's Day is ~7 weeks out.
+**🔴 Churn Risk is at 30.5% of base** — 305 customers in seg-012 (score > 0.70) are deeply disengaged, all with zero recent purchases. The top 100 score above 0.98, representing ~$9,345 in estimated 12-month revenue at risk. The most urgent recovery targets aren't the biggest group — they're the 3 **Loyalist-persona** customers, followed by 8 high-CLV Gifters (CLV > $200), who have a natural re-engagement hook: Mother's Day is ~7 weeks out.
+
+> **Overlap note:** Cart Abandoners (seg-004, 261 customers) likely has significant overlap with Churn Risk (seg-012, 305). If so, the effectively disengaged-but-reachable cohort could exceed 400 customers — nearly half the base. The report flags this for a deduplicated count analysis before the winback campaign is sized.
 
 **🔴 Lapsed Loyalists (seg-006) has 0 members** — flagged as an anomaly. The finding doesn't collapse it to a footnote: two explanations are presented (a prior winback campaign worked, or the segment rules are evaluating incorrectly) with a queue request prompting `/plan-campaign` to investigate. A zero-member segment that was previously active is data — silently ignoring it would be a gap.
+
+One additional nuance on the Gifter churn cohort: the report flags that high churn scores among Gifters may be partially inflated. Gifters buy seasonally — low recency in March doesn't necessarily mean permanent disengagement; it may reflect the post-holiday lull before the spring gifting season. Mother's Day in ~7 weeks provides the re-engagement timing to test this hypothesis without a discount.
 
 **🟡 Pre-Order Eligible (seg-011) is the highest-CLV opportunity** — 100 Loyalist and Collector-persona customers with avg CLV $1,886 and a 40% email open rate. Spring is the ideal window for a Barolo or Nebbiolo limited-allocation campaign. Importantly: no discounting. The framing for this segment is scarcity and provenance, not savings.
 
@@ -76,7 +82,17 @@ Three output files written in the same session:
 
 **`customer-insights-report-2026-03-15.md`** — Executive summary: full RFM distribution across the 500-customer sample, CLV tier breakdown (13.4% above $2k), churn risk by persona, complete 12-segment membership table with CLV and engagement metrics, and the seg-006 anomaly flagged explicitly.
 
-**`churn-risk-2026-03-15.md`** — Actionable churn report: the top 100 at-risk customers tiered into four recovery tracks — Tier 1 (3 Loyalists: PRIORITY_WINBACK), Tier 2 (8 high-CLV Gifters: GIFTER_WINBACK with Mother's Day timing), Tier 3 (42 standard winbacks across Explorer, Gifter, DealSeeker personas), Tier 4 (8 suppress — CLV < $20, recovery not cost-effective). Each tier has a recommended action, not just a label.
+**`churn-risk-2026-03-15.md`** — Actionable churn report: the top 100 at-risk customers tiered into four recovery tracks using a structured action vocabulary:
+
+| Action | Who | Approach |
+|---|---|---|
+| `PRIORITY_WINBACK` | 3 Loyalist-persona customers | Personalized, exclusive offer — no discount |
+| `GIFTER_WINBACK` | 8 high-CLV Gifters (CLV > $200) | Seasonal occasion framing — Mother's Day hook |
+| `STANDARD_WINBACK` | Explorer and Gifter CLV $50–200 | Discovery/story re-engagement — no deep discount |
+| `PROMO_WINBACK` | DealSeeker customers | Promotional trigger — requires an active offer |
+| `SUPPRESS` | 8 DealSeekers (CLV < $20) | Do not send — recovery value doesn't justify spend |
+
+The action schema means the churn report isn't a list to read — it's a structured input `/send-emails` can act on directly.
 
 **`analyze-segments-2026-03-15.md`** — Run log: the full 7-step execution trace, 12-segment review summary, 5 campaign queue requests written to `/queue`, and an explicit errors/skips section noting that the MCP currently lacks write tools for RFM, CLV, churn scores, and segment membership — so those computations are reported but not persisted back. The limitation is documented, not hidden.
 
