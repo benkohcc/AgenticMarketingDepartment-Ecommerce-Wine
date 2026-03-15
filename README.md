@@ -45,6 +45,8 @@ The result is 14 skills running the full marketing lifecycle for a wine e-commer
 
 ## The Architectural Bet: MCP as a Vertical Standard
 
+![MCP Diagram](docs/MCP-Diagram.png)
+
 The more interesting idea this project is exploring is whether the **MCP (Model Context Protocol) server** could become a *standardized interface* for marketing AI in a given vertical.
 
 Right now, when you add AI to a marketing stack, the AI and the tooling are coupled together. Every deployment is bespoke. This project hypothesises that there's a better structure: define a canonical MCP schema for what a marketing AI in wine e-commerce needs — the data it reads, the tools it calls, the domains it writes to — and then let both sides of that interface be optimized independently.
@@ -195,6 +197,8 @@ The real-time signal layer. Search queries reveal demand gaps — customers sear
 ---
 
 ## The Data Model
+
+![Data Model Diagram](docs/Data-Model-Diagram.png)
 
 The MCP server is backed by synthetic seed data across 27 JSON files in `mcp-server/data/`. The core entities:
 
