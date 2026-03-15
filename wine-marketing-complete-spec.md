@@ -2026,6 +2026,7 @@ was designed to capture the additional demand /send-emails was driving to the PD
 
 ---
 
+```
 STEP 5 — CONFIRM OUTPUT
 Tell the user: "Campaign trace written to outputs/traces/[filename].md
 [If in-progress: 'X of 13 commands have run for this campaign. Re-run this task after
