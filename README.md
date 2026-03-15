@@ -33,6 +33,7 @@ This repo is the concrete implementation of that idea: 13 AI skills, a 7-domain 
 Walkthroughs showing each skill running end-to-end — the prompt, the MCP calls, the Gate decisions, and the output files.
 
 - [Spring Clearance — Bordeaux, Cab & Syrah](docs/examples/clearance-campaign/clearance-campaign.md) — `/plan-campaign` → `/generate-content` → `/send-emails`
+- [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
 
 ---
 
