@@ -12,6 +12,9 @@ wine-marketing-plugin.zip
 # Ephemeral tunnel config — URL changes every ./start-mcp.sh run
 cowork-plugin/.mcp.json
 
+# Claude Code local settings (machine-specific permissions)
+.claude/
+
 # macOS
 .DS_Store
 **/.DS_Store
