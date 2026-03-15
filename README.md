@@ -45,7 +45,7 @@ The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical s
 | `/trace-campaign` | On demand | Produces a full narrative audit document for a given campaign ID |
 | `/inspect-customer` | On demand | Produces a 360° customer brief with RFM, CLV, affinity, session history, and next-best-action |
 
-**Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files.
+**Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files. These were triggered manually during testing — in production, skills run autonomously on their schedules, with the human only stepping in at the approval gates.
 
 - [A Houston Rodeo Campaign](docs/examples/campaign-request/campaign-request.md) — `/campaign-request` → `/plan-campaign`
   The skill queries the product catalog for bold reds with food-pairing metadata, pulls seasonal calendar context, reads retrospective learnings, and writes a structured queue entry — then `/plan-campaign` turns it into a full approved brief. The system surfaces Houston-specific angles (Rodeo season, BBQ pairings, Texas pride) before the operator specifies a single parameter. City-level market intelligence at this granularity isn't scalable without AI.
