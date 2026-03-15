@@ -1,6 +1,6 @@
 # Customer Insights — Segment Analysis
 
-![Insights Dashboard](insights-dashboard.png)
+![Insights Hero](Insights-Hero.png)
 
 **Skills used:** `/analyze-segments`
 
