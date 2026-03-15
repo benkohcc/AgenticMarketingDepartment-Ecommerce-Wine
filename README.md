@@ -77,6 +77,8 @@ That separation enables two things that aren't available when AI and tools are t
 
 This repo is the concrete implementation of that idea: 14 skills, a 7-domain MCP server with 84 typed functions, and synthetic seed data to run the full system.
 
+The broader hypothesis: a canonical MCP schema for a vertical, adopted broadly as an industry standard, could become the stable interface between AI and the marketing stack — letting both sides improve independently, and giving the whole ecosystem something to build on. And if that holds, the next question writes itself: could we see AI models purpose-built for specific marketing verticals? A standard data layer would make that a lot more tractable.
+
 ---
 
 ## The MCP Functions
