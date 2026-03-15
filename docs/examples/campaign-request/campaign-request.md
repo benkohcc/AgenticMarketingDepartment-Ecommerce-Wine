@@ -72,15 +72,36 @@ One word: "yes." The skill writes the structured campaign request to the MCP que
 
 The brief targets three segments totalling ~370 customers:
 
-| Segment | Size | Avg CLV | Open Rate |
+| Segment | ID | Size | Avg CLV | Email Open Rate |
+|---|---|---|---|---|
+| Champions | seg-005 | 71 | $1,609 | 42% |
+| Bordeaux Loyalists | seg-001 | 181 | $1,476 | 41% |
+| High CLV Potential | seg-010 | 150 | $1,081 | 35% |
+
+Three SKUs selected to span price points, each mapped to BBQ-appropriate pairings:
+
+| SKU | Name | Price | Key Pairing |
 |---|---|---|---|
-| Champions | 71 | $1,609 | 42% |
-| Bordeaux Loyalists | 181 | $1,476 | 41% |
-| High CLV Potential | 150 | $1,081 | 35% |
+| SKU-061 | Domaine Mayo Syrah 2020 | $58 | Grilled flank steak, chimichurri chicken |
+| SKU-010 | Domaine Gonzalez Cabernet Sauvignon 2021 | $100 | Mid-tier anchor |
+| SKU-001 | Tenuta Rhodes Cabernet Sauvignon 2019 | $185 | Grilled ribeye, lamb chops |
 
-Messaging direction: bold, BBQ-friendly Texas reds. Hook: "Big wines for a big Texas tradition." Free shipping framed as a friction reducer, not a discount.
+Messaging direction:
 
-One detail worth noting: the brief cites a retrospective learning applied automatically — email delivered 3.6× ROAS in Holiday 2024, so the channel mix leads with email and keeps paid at zero. The operator didn't instruct this. `/plan-campaign` pulled the retrospective record and applied it.
+- **Angle:** Bold, BBQ-friendly Texas reds for Rodeo season
+- **Tone:** Celebratory, Texan pride, food-forward
+- **Hook:** "Big wines for a big Texas tradition"
+- **Offer framing:** Free shipping — lowers friction without anchoring price expectations
+
+KPIs set in the brief: email open rate ≥35%, click rate ≥4%, social engagement rate ≥3%.
+
+Retrospective learnings applied automatically by `/plan-campaign`:
+
+- Email is highest-ROAS channel for seasonal campaigns (3.6× in Holiday 2024) — lead with email
+- No paid spend; social supports reach amplification
+- Free shipping preferred over % discount for high-CLV audiences to avoid price anchoring
+
+The operator didn't instruct any of this. `/plan-campaign` pulled the retrospective records and applied them to channel mix, offer type, and spend allocation without being asked.
 
 The operator types `approve camp-101`. Status sets to ACTIVE. Brief saved to outputs. Campaign enters the execution pipeline.
 
@@ -109,3 +130,37 @@ The operator types `approve camp-101`. Status sets to ACTIVE. Brief saved to out
 ### Free shipping vs. discount is a data-informed decision
 
 The choice to use free shipping rather than a percentage discount wasn't the operator's instruction — it was the skill's default for high-CLV seasonal audiences, grounded in the principle that discounting anchors price expectations on premium products. The retrospective record confirming email as the highest-ROAS channel reinforced the $0 paid spend decision. The brief is shaped by what the system knows about this customer base, not just by what the operator asked for.
+
+---
+
+## Behind the Scenes
+
+Two skills, one session. Here's every tool call that ran.
+
+**`/campaign-request` phase**
+- `TodoWrite` — task tracking setup
+- `ToolSearch` → `get_product_catalog` schema
+- `mcp (get_product_catalog)` — full wine catalog, filtered by rating, in-stock only
+- `Bash` ×4 — parsed catalog JSON to extract bold reds with BBQ-appropriate pairings
+- `ToolSearch` → `create_campaign_request` schema
+- `mcp (create_campaign_request)` — wrote `req-1773597775398` to the queue
+- `TodoWrite` — marked tasks complete
+
+**`/plan-campaign` phase**
+- `TodoWrite` — task tracking setup
+- `ToolSearch` ×2 — fetched schemas for `get_campaign_requests`, `get_campaign_type_defaults`, `get_personas`, `get_seasonal_calendar`, `get_customer_segments`, `get_campaign_retrospective`
+- `mcp (get_seasonal_calendar)` — loaded upcoming seasonal windows
+- `mcp (get_campaign_retrospective)` — pulled last 5 seasonal campaign retrospectives
+- `ToolSearch` → `create_campaign_brief` schema
+- `mcp (create_campaign_brief)` — created `camp-101` in DRAFT status
+- `ToolSearch` → `update_campaign_status`, `create_approval_record`, `update_campaign_request` schemas
+- `mcp (create_approval_record)` — logged Gate 1 approval `appr-1773598089975`
+- `mcp (update_campaign_status)` — set `camp-101` to ACTIVE
+- `mcp (update_campaign_request)` — marked `req-1773597775398` as processed
+- `Bash` — created output directories
+- `Write` — wrote campaign brief to `outputs/campaigns/`
+- `Bash` + `Read` + `Edit` — appended rodeo campaign to `active-campaigns.json`
+- `Read` + `Edit` — appended Run 4 entry to `logs/plan-campaign-2026-03-15.md`
+- `TodoWrite` — marked all tasks complete
+
+**Total across both skills:** 9 MCP calls · 6 file operations · 5 Bash commands · 6 ToolSearch calls · 5 TodoWrite updates
