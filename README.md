@@ -8,7 +8,38 @@ Most AI in marketing gets bolted on. An AI writing assistant here, an AI analyti
 
 The question driving every decision was: what does a marketing department actually need to do, and what would it look like if AI designed it with no legacy constraints? The premise was that there is no human marketing team — AI replaces it entirely. AI was asked what capabilities it would need to run a marketing operation end to end — from detecting overstock in a warehouse to writing campaign copy, launching ads, personalising recommendations, and writing retrospectives. Critically, everything designed here — the MCP functions, the data schemas, the skill prompts — is an interface for AI to consume, not for humans. Then those answers became the spec.
 
-The result is 13 AI skills running the full marketing lifecycle for a wine e-commerce store: strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill is autonomous, runs on a schedule or on demand, and interacts with everything else through a shared data layer rather than direct communication. A human operator maintains a small number of approval gates — the places where judgment matters most — but owns no day-to-day marketing execution.
+The result is 14 skills running the full marketing lifecycle for a wine e-commerce store: strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill is autonomous, runs on a schedule or on demand, and interacts with everything else through a shared data layer rather than direct communication. A human operator maintains a small number of approval gates — the places where judgment matters most — but owns no day-to-day marketing execution.
+
+---
+
+## The Skills
+
+![Skill Workflow](docs/Skill-Workflow.png)
+
+14 skills run the full marketing lifecycle — from inventory detection to campaign execution to retrospective. Each skill is autonomous, runs on a schedule or on demand, and communicates with every other skill through the shared MCP data layer.
+
+| Skill | Schedule | Description |
+|---|---|---|
+| `/campaign-request` | On demand | Human entry point — translates plain-language campaign requests into structured queue entries |
+| `/plan-campaign` | Mon 09:00 + on demand | Reads inventory alerts and campaign requests, creates campaign briefs, owns Gate 1 approval |
+| `/generate-content` | After Gate 1 | Writes all copy assets (email, paid, social) for approved briefs, owns Gate 2 approval |
+| `/send-emails` | Daily 10:00 | Sends campaign emails, manages suppression lists, handles day-3 follow-ups |
+| `/manage-ads` | Daily 09:30 | Launches and monitors Google Shopping and Meta campaigns, participates in Gate 3 |
+| `/publish-social` | Daily 09:30 | Publishes to Instagram, Facebook, and Pinterest, participates in Gate 3 |
+| `/performance-report` | Daily 18:00 | Reports campaign KPIs, detects anomalies, writes retrospectives, marks campaigns complete |
+| `/check-inventory` | Every 4 hours | Scans stock levels, raises overstock/stockout/high-intent alerts to the queue |
+| `/analyze-segments` | Mon 05:00 | Refreshes RFM scores, CLV estimates, churn risk, and segment membership |
+| `/update-personalization` | Daily 06:00 | Refreshes recommendation scores, applies campaign boosts, owns Gate 4 (A/B test winners) |
+| `/review-behavior` | Daily 07:00 | Monitors funnel health, manages A/B tests, updates merchandising rules, flags demand gaps |
+| `/seo-audit` | Mon 08:00 | Audits organic search demand gaps, creates SEO content briefs |
+| `/trace-campaign` | On demand | Produces a full narrative audit document for a given campaign ID |
+| `/inspect-customer` | On demand | Produces a 360° customer brief with RFM, CLV, affinity, session history, and next-best-action |
+
+**Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files.
+
+- [Spring Clearance — Bordeaux, Cab & Syrah](docs/examples/clearance-campaign/clearance-campaign.md) — `/plan-campaign` → `/generate-content` → `/send-emails`
+- [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
+- [Customer Insights — Segment Analysis](docs/examples/insights/insights.md) — `/analyze-segments`
 
 ---
 
@@ -25,16 +56,6 @@ That separation enables two things that aren't available when AI and tools are t
 **2. Independent optimization of the data and tools layer.** The MCP abstraction means the underlying implementation can change — better data quality, faster queries, richer behavioral signals, a different ESP — without touching the AI. The interface remains the same. The two sides can improve at different rates and for different reasons.
 
 This repo is the concrete implementation of that idea: 14 skills, a 7-domain MCP server with 84 typed functions, and synthetic seed data to run the full system.
-
----
-
-## Skills in Action
-
-Walkthroughs showing each skill running end-to-end — the prompt, the MCP calls, the Gate decisions, and the output files.
-
-- [Spring Clearance — Bordeaux, Cab & Syrah](docs/examples/clearance-campaign/clearance-campaign.md) — `/plan-campaign` → `/generate-content` → `/send-emails`
-- [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
-- [Customer Insights — Segment Analysis](docs/examples/insights/insights.md) — `/analyze-segments`
 
 ---
 
@@ -191,6 +212,18 @@ The AI-specific fields — `churn_risk_score`, `varietal_affinities`, `intent_sc
 
 ---
 
+## Human Approval Gates
+
+The system will pause and ask for your sign-off at five points:
+
+1. **Gate 1 — Campaign Brief** (`/plan-campaign`): Approve the campaign strategy, target segment, channels, and budget before any content is created
+2. **Gate 2 — Content Assets** (`/generate-content`): Approve or request revisions to email copy, ad copy, and social captions before anything is sent or published
+3. **Gate 3 — Creative Upload** (`/manage-ads`, `/publish-social`): Approve custom creative before it goes live on paid or social channels
+4. **Gate 4 — A/B Test Winner** (`/update-personalization`): Approve promoting a winning A/B test variant to 100% of traffic
+5. **Campaign Activation** (any skill): No skill may call `update_campaign_status("active")` without explicit confirmation in the current session
+
+---
+
 ## Repository Layout
 
 ```
@@ -254,6 +287,10 @@ In Claude Desktop → Cowork, install `wine-marketing-plugin.zip` and add the MC
 
 > **Note:** `cowork-plugin/.mcp.json` is gitignored — it contains a session-specific tunnel URL that changes on every run. `start-mcp.sh` writes it automatically. See [`cowork-plugin/.mcp.json.example`](cowork-plugin/.mcp.json.example) for the format.
 
+**4. Invoke skills**
+
+All 14 skills are available in Cowork. Type `/plan-campaign`, `/check-inventory`, `/inspect-customer cust-0042`, or `/campaign-request` for ad hoc campaigns. Skills with cron schedules run automatically at their configured times.
+
 ---
 
 ## Working Folder
@@ -280,87 +317,6 @@ Initialise before first run:
 ```bash
 echo "[]" > context/active-campaigns.json
 ```
-
----
-
-## How to Run
-
-### 1. Build the MCP server
-
-```bash
-cd mcp-server
-npm install
-npm run build
-```
-
-### 2. Start the MCP server and tunnel
-
-```bash
-# From the project root
-./start-mcp.sh
-```
-
-This script:
-- Starts the MCP server on port 3101 (HTTPS)
-- Opens a Cloudflare tunnel and captures the public URL
-- Updates `cowork-plugin/.mcp.json` with the live tunnel URL
-- Rebuilds `wine-marketing-plugin.zip`
-
-Keep this terminal open. The tunnel URL changes every time you restart the script.
-
-### 3. Install the plugin in Claude Desktop
-
-1. Open Claude Desktop → Cowork tab
-2. Click **Customize** in the left sidebar
-3. Select **Browse plugins**
-4. Click **Upload custom plugin files** → select the `cowork-plugin/` folder, or upload `wine-marketing-plugin.zip`
-5. Reinstall after every `./start-mcp.sh` restart (the MCP URL changes)
-
-### 4. Invoke skills
-
-All 14 skills are now available in Cowork. You can:
-- **Invoke manually:** type `/plan-campaign`, `/check-inventory`, `/inspect-customer cust-0042`, etc.
-- **Let scheduled runs fire:** skills with cron schedules run automatically at their configured times
-- **Request ad hoc campaigns:** use `/campaign-request` to describe what you want in plain language
-
----
-
-## Skill Workflow
-
-![Skill Workflow](docs/Skill-Workflow.png)
-
----
-
-## The 14 Skills
-
-| Skill | Schedule | Description |
-|---|---|---|
-| `/campaign-request` | On demand | Human entry point — translates plain-language campaign requests into structured queue entries |
-| `/plan-campaign` | Mon 09:00 + on demand | Reads inventory alerts and campaign requests, creates campaign briefs, owns Gate 1 approval |
-| `/generate-content` | After Gate 1 | Writes all copy assets (email, paid, social) for approved briefs, owns Gate 2 approval |
-| `/send-emails` | Daily 10:00 | Sends campaign emails, manages suppression lists, handles day-3 follow-ups |
-| `/manage-ads` | Daily 09:30 | Launches and monitors Google Shopping and Meta campaigns, participates in Gate 3 |
-| `/publish-social` | Daily 09:30 | Publishes to Instagram, Facebook, and Pinterest, participates in Gate 3 |
-| `/performance-report` | Daily 18:00 | Reports campaign KPIs, detects anomalies, writes retrospectives, marks campaigns complete |
-| `/check-inventory` | Every 4 hours | Scans stock levels, raises overstock/stockout/high-intent alerts to the queue |
-| `/analyze-segments` | Mon 05:00 | Refreshes RFM scores, CLV estimates, churn risk, and segment membership |
-| `/update-personalization` | Daily 06:00 | Refreshes recommendation scores, applies campaign boosts, owns Gate 4 (A/B test winners) |
-| `/review-behavior` | Daily 07:00 | Monitors funnel health, manages A/B tests, updates merchandising rules, flags demand gaps |
-| `/seo-audit` | Mon 08:00 | Audits organic search demand gaps, creates SEO content briefs |
-| `/trace-campaign` | On demand | Produces a full narrative audit document for a given campaign ID |
-| `/inspect-customer` | On demand | Produces a 360° customer brief with RFM, CLV, affinity, session history, and next-best-action |
-
----
-
-## Human Approval Gates
-
-The system will pause and ask for your sign-off at five points:
-
-1. **Gate 1 — Campaign Brief** (`/plan-campaign`): Approve the campaign strategy, target segment, channels, and budget before any content is created
-2. **Gate 2 — Content Assets** (`/generate-content`): Approve or request revisions to email copy, ad copy, and social captions before anything is sent or published
-3. **Gate 3 — Creative Upload** (`/manage-ads`, `/publish-social`): Approve custom creative before it goes live on paid or social channels
-4. **Gate 4 — A/B Test Winner** (`/update-personalization`): Approve promoting a winning A/B test variant to 100% of traffic
-5. **Campaign Activation** (any skill): No skill may call `update_campaign_status("active")` without explicit confirmation in the current session
 
 ---
 
