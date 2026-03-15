@@ -10,7 +10,7 @@ A walkthrough of a clearance campaign from a single prompt to emails in inboxes 
 
 The session starts with a single open-ended prompt. No inventory alert queued, no brief prepped — just a goal.
 
-<img src="Screenshot%202026-03-15%20at%202.36.01%E2%80%AFAM.png" width="374" alt="The prompt and proactive scan summary">
+<img src="Screenshot%202026-03-15%20at%202.36.01%E2%80%AFAM.png" width="449" alt="The prompt and proactive scan summary">
 
 > *"/wine-marketing:plan-campaign help me find the opportunities to grow sales. Sales have been slow in Q1 of this year. It is currently March 15."*
 
@@ -24,7 +24,7 @@ Three opportunities surface: a **Spring Clearance** (seasonal window opens today
 
 ## Gate 1 — Campaign 1 of 3: Spring Clearance
 
-<img src="Screenshot%202026-03-15%20at%202.36.27%E2%80%AFAM.png" width="374" alt="Brief for camp-101 — Spring Clearance">
+<img src="Screenshot%202026-03-15%20at%202.36.27%E2%80%AFAM.png" width="449" alt="Brief for camp-101 — Spring Clearance">
 
 **camp-101 · Promotion · 487 customers · 18% off · $1,500 budget · Mar 16–30**
 
@@ -40,7 +40,7 @@ The channel sequence and creative direction come directly from camp-001, a near-
 
 ## Gate 1 — Campaign 2 of 3: Q1 Winback
 
-<img src="Screenshot%202026-03-15%20at%202.36.44%E2%80%AFAM.png" width="374" alt="Brief for camp-102 — Winback">
+<img src="Screenshot%202026-03-15%20at%202.36.44%E2%80%AFAM.png" width="449" alt="Brief for camp-102 — Winback">
 
 **camp-102 · Winback · 566 customers · 10% soft offer · $60 budget · Mar 16–30**
 
@@ -50,7 +50,7 @@ The channel sequence and creative direction come directly from camp-001, a near-
 
 ## Gate 1 — Campaign 3 of 3: Natural Wine Explorer Bundle
 
-<img src="Screenshot%202026-03-15%20at%202.37.02%E2%80%AFAM.png" width="374" alt="Brief for camp-103 — Bundle">
+<img src="Screenshot%202026-03-15%20at%202.37.02%E2%80%AFAM.png" width="449" alt="Brief for camp-103 — Bundle">
 
 **camp-103 · Bundle · 299 customers · 15% bundle discount · $300 budget · Mar 17–31**
 
@@ -60,7 +60,7 @@ Three Natural/Biodynamic SKUs at 63–84 days supply are curated into a trio spa
 
 ## The Human Decision
 
-<img src="Screenshot%202026-03-15%20at%202.37.32%E2%80%AFAM.png" width="374" alt="Priority recommendation and human approval">
+<img src="Screenshot%202026-03-15%20at%202.37.32%E2%80%AFAM.png" width="449" alt="Priority recommendation and human approval">
 
 The skill closes Gate 1 with a prioritised recommendation: start with camp-101 (time-sensitive seasonal window, proven retrospective), then camp-102 (near-zero cost revenue recovery), then camp-103 (AOV lift).
 
@@ -76,7 +76,7 @@ The skill processes all three responses simultaneously: camp-101 moves to ACTIVE
 
 ## Step 2 — `/generate-content`: Building the Copy Package
 
-<img src="Screenshot%202026-03-15%20at%202.46.46%E2%80%AFAM.png" width="374" alt="/generate-content loading">
+<img src="Screenshot%202026-03-15%20at%202.46.46%E2%80%AFAM.png" width="449" alt="/generate-content loading">
 
 `/generate-content` picks up the approved campaign via `get_approval_records(gate: 1, decision: "approved")`. It confirms camp-101 is active, then pulls SKU details for all four wines — Bordeaux Blend, Cabernet, and Syrah lines in parallel — before generating 12 assets across email, paid, and social simultaneously.
 
@@ -84,7 +84,7 @@ The skill processes all three responses simultaneously: camp-101 moves to ACTIVE
 
 ### Gate 2 — Email Copy
 
-<img src="Screenshot%202026-03-15%20at%202.47.06%E2%80%AFAM.png" width="374" alt="Gate 2 — email copy">
+<img src="Screenshot%202026-03-15%20at%202.47.06%E2%80%AFAM.png" width="449" alt="Gate 2 — email copy">
 
 Two subject lines are presented for A/B testing — the skill applies the retrospective learning directly:
 
@@ -99,7 +99,7 @@ The email body is written in the curiosity-first voice: *"Here's what happened: 
 
 ### Gate 2 — Paid Copy
 
-<img src="Screenshot%202026-03-15%20at%202.47.20%E2%80%AFAM.png" width="374" alt="Gate 2 — paid copy">
+<img src="Screenshot%202026-03-15%20at%202.47.20%E2%80%AFAM.png" width="449" alt="Gate 2 — paid copy">
 
 Google Shopping and Meta assets are generated using the same voice — direct, self-aware, urgency without hype:
 
@@ -111,7 +111,7 @@ Google Shopping and Meta assets are generated using the same voice — direct, s
 
 ### Gate 2 — Social Copy
 
-<img src="Screenshot%202026-03-15%20at%202.47.40%E2%80%AFAM.png" width="374" alt="Gate 2 — social copy">
+<img src="Screenshot%202026-03-15%20at%202.47.40%E2%80%AFAM.png" width="449" alt="Gate 2 — social copy">
 
 Four platform-native posts generated:
 
@@ -124,7 +124,7 @@ Four platform-native posts generated:
 
 ### Gate 2 — Actions
 
-<img src="Screenshot%202026-03-15%20at%202.47.57%E2%80%AFAM.png" width="374" alt="Gate 2 approval actions">
+<img src="Screenshot%202026-03-15%20at%202.47.57%E2%80%AFAM.png" width="449" alt="Gate 2 approval actions">
 
 The skill presents per-channel approval options:
 
@@ -141,7 +141,7 @@ reject camp-101 [channel]  — exclude a channel
 
 ### All Channels Approved
 
-<img src="Screenshot%202026-03-15%20at%202.49.04%E2%80%AFAM.png" width="374" alt="All three channels approved">
+<img src="Screenshot%202026-03-15%20at%202.49.04%E2%80%AFAM.png" width="449" alt="All three channels approved">
 
 > *"approve all"*
 
@@ -159,7 +159,7 @@ All three Gate 2 approval records are written simultaneously:
 
 ## Step 3 — `/send-emails`: Launching to 454 Inboxes
 
-<img src="Screenshot%202026-03-15%20at%202.54.17%E2%80%AFAM.png" width="374" alt="/send-emails run log">
+<img src="Screenshot%202026-03-15%20at%202.54.17%E2%80%AFAM.png" width="449" alt="/send-emails run log">
 
 `/send-emails` confirms Gate 1 and Gate 2 email approvals via MCP, then resolves all three target segments simultaneously. Deduplication across Cart Abandoners, Price-Sensitive Buyers, and Bordeaux Loyalists collapses 487 addresses to **473 unique customers**. After 19 suppressions (global unsubscribe + 3-day fatigue guard), **454 emails are delivered**.
 
@@ -169,7 +169,7 @@ The send fires with a 50/50 A/B split — Subject A (benefit-led) vs Subject B (
 
 ### Email & Lifecycle Run Summary
 
-<img src="Screenshot%202026-03-15%20at%202.54.31%E2%80%AFAM.png" width="374" alt="Send summary">
+<img src="Screenshot%202026-03-15%20at%202.54.31%E2%80%AFAM.png" width="449" alt="Send summary">
 
 ```
 Email & Lifecycle Run — 2026-03-15T07:50Z
