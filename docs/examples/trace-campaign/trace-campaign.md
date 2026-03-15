@@ -1,5 +1,7 @@
 # Campaign Trace & Retrospective — Bordeaux Spring Clearance
 
+![Trace Diagram](Trace-Diagram.png)
+
 **Skills used:** `/trace-campaign` + `/performance-report` (retrospective author)
 
 A walkthrough of the campaign audit and retrospective workflow. `/trace-campaign` reconstructs the full lifecycle of any completed campaign from MCP data — from the inventory alert that triggered it to the retrospective learnings that fed the next one.
