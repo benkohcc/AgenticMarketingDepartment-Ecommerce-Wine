@@ -1,5 +1,7 @@
 # A Houston Rodeo Campaign
 
+![Campaign Request Workflow](Campaign-Request-Workflow.png)
+
 **Skills used:** `/campaign-request`, `/plan-campaign`
 
 The `/campaign-request` skill is the human operator's direct entry point into the marketing system — for moments when you have an idea and want to get it into the queue without writing a brief yourself. This walkthrough shows how a seasonal campaign goes from a half-formed idea to an approved, active campaign brief. It also illustrates something that looks routine but isn't: the system generating hyper-local Houston intelligence that no general-purpose marketing tool would produce without significant manual research.
