@@ -10,7 +10,7 @@ A walkthrough of a clearance campaign from a single prompt to emails in inboxes 
 
 The session starts with a single open-ended prompt. No inventory alert queued, no brief prepped — just a goal.
 
-![The prompt and proactive scan summary](Screenshot%202026-03-15%20at%202.36.01%20AM.png)
+![The prompt and proactive scan summary](Screenshot%202026-03-15%20at%202.36.01%E2%80%AFAM.png)
 
 > *"/wine-marketing:plan-campaign help me find the opportunities to grow sales. Sales have been slow in Q1 of this year. It is currently March 15."*
 
@@ -24,7 +24,7 @@ Three opportunities surface: a **Spring Clearance** (seasonal window opens today
 
 ## Gate 1 — Campaign 1 of 3: Spring Clearance
 
-![Brief for camp-101 — Spring Clearance](Screenshot%202026-03-15%20at%202.36.27%20AM.png)
+![Brief for camp-101 — Spring Clearance](Screenshot%202026-03-15%20at%202.36.27%E2%80%AFAM.png)
 
 **camp-101 · Promotion · 487 customers · 18% off · $1,500 budget · Mar 16–30**
 
@@ -40,7 +40,7 @@ The channel sequence and creative direction come directly from camp-001, a near-
 
 ## Gate 1 — Campaign 2 of 3: Q1 Winback
 
-![Brief for camp-102 — Winback](Screenshot%202026-03-15%20at%202.36.44%20AM.png)
+![Brief for camp-102 — Winback](Screenshot%202026-03-15%20at%202.36.44%E2%80%AFAM.png)
 
 **camp-102 · Winback · 566 customers · 10% soft offer · $60 budget · Mar 16–30**
 
@@ -50,7 +50,7 @@ The channel sequence and creative direction come directly from camp-001, a near-
 
 ## Gate 1 — Campaign 3 of 3: Natural Wine Explorer Bundle
 
-![Brief for camp-103 — Bundle](Screenshot%202026-03-15%20at%202.37.02%20AM.png)
+![Brief for camp-103 — Bundle](Screenshot%202026-03-15%20at%202.37.02%E2%80%AFAM.png)
 
 **camp-103 · Bundle · 299 customers · 15% bundle discount · $300 budget · Mar 17–31**
 
@@ -60,7 +60,7 @@ Three Natural/Biodynamic SKUs at 63–84 days supply are curated into a trio spa
 
 ## The Human Decision
 
-![Priority recommendation and human approval](Screenshot%202026-03-15%20at%202.37.32%20AM.png)
+![Priority recommendation and human approval](Screenshot%202026-03-15%20at%202.37.32%E2%80%AFAM.png)
 
 The skill closes Gate 1 with a prioritised recommendation: start with camp-101 (time-sensitive seasonal window, proven retrospective), then camp-102 (near-zero cost revenue recovery), then camp-103 (AOV lift).
 
@@ -76,7 +76,7 @@ The skill processes all three responses simultaneously: camp-101 moves to ACTIVE
 
 ## Step 2 — `/generate-content`: Building the Copy Package
 
-![/generate-content loading](Screenshot%202026-03-15%20at%202.46.46%20AM.png)
+![/generate-content loading](Screenshot%202026-03-15%20at%202.46.46%E2%80%AFAM.png)
 
 `/generate-content` picks up the approved campaign via `get_approval_records(gate: 1, decision: "approved")`. It confirms camp-101 is active, then pulls SKU details for all four wines — Bordeaux Blend, Cabernet, and Syrah lines in parallel — before generating 12 assets across email, paid, and social simultaneously.
 
@@ -84,7 +84,7 @@ The skill processes all three responses simultaneously: camp-101 moves to ACTIVE
 
 ### Gate 2 — Email Copy
 
-![Gate 2 — email copy](Screenshot%202026-03-15%20at%202.47.06%20AM.png)
+![Gate 2 — email copy](Screenshot%202026-03-15%20at%202.47.06%E2%80%AFAM.png)
 
 Two subject lines are presented for A/B testing — the skill applies the retrospective learning directly:
 
@@ -99,7 +99,7 @@ The email body is written in the curiosity-first voice: *"Here's what happened: 
 
 ### Gate 2 — Paid Copy
 
-![Gate 2 — paid copy](Screenshot%202026-03-15%20at%202.47.20%20AM.png)
+![Gate 2 — paid copy](Screenshot%202026-03-15%20at%202.47.20%E2%80%AFAM.png)
 
 Google Shopping and Meta assets are generated using the same voice — direct, self-aware, urgency without hype:
 
@@ -111,7 +111,7 @@ Google Shopping and Meta assets are generated using the same voice — direct, s
 
 ### Gate 2 — Social Copy
 
-![Gate 2 — social copy](Screenshot%202026-03-15%20at%202.47.40%20AM.png)
+![Gate 2 — social copy](Screenshot%202026-03-15%20at%202.47.40%E2%80%AFAM.png)
 
 Four platform-native posts generated:
 
@@ -124,7 +124,7 @@ Four platform-native posts generated:
 
 ### Gate 2 — Actions
 
-![Gate 2 approval actions](Screenshot%202026-03-15%20at%202.47.57%20AM.png)
+![Gate 2 approval actions](Screenshot%202026-03-15%20at%202.47.57%E2%80%AFAM.png)
 
 The skill presents per-channel approval options:
 
@@ -141,7 +141,7 @@ reject camp-101 [channel]  — exclude a channel
 
 ### All Channels Approved
 
-![All three channels approved](Screenshot%202026-03-15%20at%202.49.04%20AM.png)
+![All three channels approved](Screenshot%202026-03-15%20at%202.49.04%E2%80%AFAM.png)
 
 > *"approve all"*
 
@@ -159,7 +159,7 @@ All three Gate 2 approval records are written simultaneously:
 
 ## Step 3 — `/send-emails`: Launching to 454 Inboxes
 
-![/send-emails run log](Screenshot%202026-03-15%20at%202.54.17%20AM.png)
+![/send-emails run log](Screenshot%202026-03-15%20at%202.54.17%E2%80%AFAM.png)
 
 `/send-emails` confirms Gate 1 and Gate 2 email approvals via MCP, then resolves all three target segments simultaneously. Deduplication across Cart Abandoners, Price-Sensitive Buyers, and Bordeaux Loyalists collapses 487 addresses to **473 unique customers**. After 19 suppressions (global unsubscribe + 3-day fatigue guard), **454 emails are delivered**.
 
@@ -169,7 +169,7 @@ The send fires with a 50/50 A/B split — Subject A (benefit-led) vs Subject B (
 
 ### Email & Lifecycle Run Summary
 
-![Send summary](Screenshot%202026-03-15%20at%202.54.31%20AM.png)
+![Send summary](Screenshot%202026-03-15%20at%202.54.31%E2%80%AFAM.png)
 
 ```
 Email & Lifecycle Run — 2026-03-15T07:50Z
@@ -190,6 +190,40 @@ Errors: None
 ```
 
 The Day-3 non-opener follow-up is locked in for March 19 — the mechanic that drove 34% of email revenue in the retrospective campaign it was modelled on.
+
+---
+
+## Why This Architecture Made It Work
+
+### MCP as a shared memory layer
+
+Every decision in this session — the channel sequence, the subject line test, the Day-3 follow-up — traces back to data that lives in the MCP. The retrospective from camp-001 was stored as a structured record with explicit fields for `best_performing_element`, `ab_test_winner`, and `recommendations_for_next_campaign`. When `/plan-campaign` called `get_campaign_retrospectives(campaign_type: "promotion", limit: 5)`, those learnings came back as data the skill could reason over directly, not as a document to summarise.
+
+That's a meaningful difference. A skill that reads a structured retrospective can apply specific rules: *use curiosity-led subjects, launch paid on day 6, always schedule the Day-3 follow-up*. A skill reading prose would have to re-interpret and might skip or misapply them. The MCP turns past campaign performance into a queryable institutional memory.
+
+The same pattern applies across the whole session. `/generate-content` didn't need to rediscover the target segments or the offer — it called `get_campaign_brief(camp-101)` and got the exact segments, SKUs, discount, and channel split already decided. `/send-emails` didn't need to know campaign logic — it called `get_approval_records(gate: 2)` and confirmed clearance, then called `get_segment_members(seg-004)` to retrieve the actual audience. Each skill does one job and reads exactly what it needs from the MCP. Nothing is passed through conversation context or hardcoded.
+
+### The data model surfaced opportunities a human would have missed
+
+The proactive scan found three distinct opportunities from a single prompt because the data model was built to support that kind of cross-domain reasoning. The `days_of_supply` field on every SKU made overstock immediately detectable. The `churn_risk_score` on every customer made the winback pool queryable in one call. The `upsell_propensity` and `varietal_affinities` fields on customer records made the bundle segment obvious. None of this required manual analysis — the fields existed, the skill queried them, and the opportunities surfaced automatically.
+
+The Q1 diagnosis — *"email ROAS is 192×, paid is 6.4×, the problem is volume not spend efficiency"* — came from `get_campaign_performance_summary()` returning structured channel-level ROAS data. A human looking at a dashboard might reach the same conclusion eventually. The skill reached it in a single MCP call, before drafting a single brief.
+
+### Approval gates kept humans in control without creating friction
+
+Gate 1 and Gate 2 were the only moments requiring human input across the entire session — two decisions, one line each. Everything else was autonomous. That ratio matters: the gates were placed at the two decisions where human judgment genuinely adds value (which campaigns to run, whether the copy is on-brand), not at every step.
+
+The gate design also made the approval fast. Each Gate 1 brief included a structured `Rationale` section — inventory trigger, retrospective match, segment fit — so the human had the context to make a confident decision without reading the underlying data. Approving all content at once with `approve all` instead of channel by channel was a deliberate option in Gate 2 for sessions where trust in the output is high.
+
+Critically, the approval records are stored in MCP — not in a file, not in conversation context. When `/send-emails` ran, it confirmed Gate 2 email approval with `get_approval_records(campaign_id: "camp-101", gate: 2)` before doing anything. The gate is enforced at execution time by the skill itself, not by the operator remembering to check. That's what makes the system safe to run autonomously at scale.
+
+### Skills are narrow by design
+
+Each skill in this session had a tightly scoped job. `/plan-campaign` creates briefs and owns Gate 1. It doesn't write copy. `/generate-content` writes copy and owns Gate 2. It doesn't send emails. `/send-emails` executes the send. It doesn't touch the campaign brief.
+
+That narrowness is what made parallelism possible throughout. `/plan-campaign` drafted all three briefs concurrently because they were independent. `/generate-content` pulled SKU details for all four wines simultaneously. `/send-emails` resolved all three segments in parallel before deduplicating. None of this required coordination between steps — each call to the MCP was independent, and the results composed naturally.
+
+The boundary between skills is also what makes the system auditable. The full trail — request raised, brief created, Gate 1 approved, content generated, Gate 2 approved, send executed — is a sequence of MCP writes. `/trace-campaign` can reconstruct the entire decision history from those records after the fact, without relying on logs or conversation history.
 
 ---
 
