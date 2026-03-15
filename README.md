@@ -14,7 +14,7 @@ The question driving every decision was: what does a marketing department actual
 - personalising on-site recommendations
 - segmenting customers by RFM, CLV, and churn risk
 
-Critically, **everything designed here — the MCP functions, the data schemas, the skill prompts — is an interface for AI to consume, not for humans.** Those answers became the spec.
+Critically, **everything designed here — the MCP functions, the data schemas, the skill prompts, even the output artifacts — is an interface for AI to consume, not for humans.** Those answers became the spec.
 
 The result is **14 autonomous skills** running the full marketing lifecycle — strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill runs on a schedule or on demand and communicates with every other skill through a shared MCP data layer rather than direct calls. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution.
 
