@@ -1,5 +1,7 @@
 # Spring Clearance — Bordeaux, Cab & Syrah
 
+![Workflow Diagram](Workflow-Diagram.png)
+
 **Skills used:** `/plan-campaign` → `/generate-content` → `/send-emails`
 
 A walkthrough of a clearance campaign from a single prompt to emails in inboxes — three skills, two approval gates, one human decision at each.
