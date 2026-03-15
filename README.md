@@ -37,9 +37,17 @@ The result is 14 skills running the full marketing lifecycle for a wine e-commer
 
 **Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files.
 
+- [A Houston Rodeo Campaign](docs/examples/campaign-request/campaign-request.md) — `/campaign-request` → `/plan-campaign`
+  The skill queries the product catalog for bold reds with food-pairing metadata, pulls seasonal calendar context, reads retrospective learnings, and writes a structured queue entry — then `/plan-campaign` turns it into a full approved brief. The system surfaces Houston-specific angles (Rodeo season, BBQ pairings, Texas pride) before the operator specifies a single parameter. City-level market intelligence at this granularity isn't scalable without AI.
+
 - [Spring Clearance — Bordeaux, Cab & Syrah](docs/examples/clearance-campaign/clearance-campaign.md) — `/plan-campaign` → `/generate-content` → `/send-emails`
-- [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
+  `/plan-campaign` reads inventory overstock signals, past campaign retrospectives, and segment CLV data to propose three briefs unprompted. `/generate-content` pulls brand guidelines, persona tone rules, and approved creative assets to write 12 channel-ready copy assets. `/send-emails` checks suppression lists, splits A/B subject lines, fires 454 sends, and schedules 15 behavioural triggers — all from one Gate 1 approval.
+
 - [Customer Insights — Segment Analysis](docs/examples/insights/insights.md) — `/analyze-segments`
+  One prompt loads 500 RFM scores, 500 CLV projections, and 100 top-risk churn records from the MCP, joins them against persona definitions and segment membership, and surfaces five findings with urgency tagging. The key one: the largest churn segment (305 customers) has the lowest avg CLV — a fact that only emerges from cross-domain data joined in a single pass, and that redirects recovery spend toward 3 high-CLV Loyalists rather than the largest group.
+
+- [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
+  The skill reads brief records, approval records, email send logs, paid metrics, social metrics, and attribution data across all 7 MCP domains to reconstruct a full campaign narrative — no spreadsheets, no manual log parsing. It surfaces a Day-3 follow-up sequence that drove 34% of email revenue and a 2.1× subject line lift, then writes those learnings back into the MCP as a structured retrospective for the next campaign brief to read.
 
 ---
 
