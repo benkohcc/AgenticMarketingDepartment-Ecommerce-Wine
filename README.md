@@ -34,6 +34,7 @@ Walkthroughs showing each skill running end-to-end — the prompt, the MCP calls
 
 - [Spring Clearance — Bordeaux, Cab & Syrah](docs/examples/clearance-campaign/clearance-campaign.md) — `/plan-campaign` → `/generate-content` → `/send-emails`
 - [Campaign Trace & Retrospective — Bordeaux Spring Clearance](docs/examples/trace-campaign/trace-campaign.md) — `/trace-campaign` + `/performance-report`
+- [Customer Insights — Segment Analysis](docs/examples/insights/insights.md) — `/analyze-segments`
 
 ---
 
