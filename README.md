@@ -69,9 +69,9 @@ Right now, when you add AI to a marketing stack, **the AI and the tooling are co
 
 That separation enables two things bespoke deployments can't:
 
-**AI optimized for the vertical.** A model tuned specifically for wine e-commerce marketing can trust that the MCP contract is stable. No hedging for tool inconsistency. Deep specialization — the right suppression rules for a seasonal campaign, the right tone for a collector persona, the right KPIs for a winback — applied reliably.
+**1. AI optimized for the vertical.** A model tuned specifically for wine e-commerce marketing can trust that the MCP contract is stable. No hedging for tool inconsistency. Deep specialization — the right suppression rules for a seasonal campaign, the right tone for a collector persona, the right KPIs for a winback — applied reliably.
 
-**Independent optimization of the data and tools layer.** Swap the ESP. Improve data quality. Add richer behavioral signals. None of it touches the AI. The interface remains the same. Both sides improve at their own rate, for their own reasons.
+**2. Independent optimization of the data and tools layer.** Swap the ESP. Improve data quality. Add richer behavioral signals. None of it touches the AI. The interface remains the same. Both sides improve at their own rate, for their own reasons.
 
 This repo is the concrete implementation: 14 skills, a 7-domain MCP server with 84 typed functions, synthetic seed data.
 
