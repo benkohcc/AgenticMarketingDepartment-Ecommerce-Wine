@@ -18,7 +18,7 @@ Critically, **everything designed here — the MCP functions, the data schemas, 
 
 The result is **14 autonomous skills** running the full marketing lifecycle — strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill runs on a schedule or on demand and communicates with every other skill through a shared MCP data layer rather than direct calls. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution.
 
-The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical schema for a marketing vertical could become the stable interface between AI and the marketing stack — letting the AI layer and the tooling layer improve independently, without the bespoke coupling that makes most AI marketing deployments fragile.
+The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical schema for a marketing vertical could become the stable interface between AI and the marketing stack — letting the AI layer and the tooling layer improve independently, without the bespoke coupling that makes most AI marketing deployments fragile. And it opens the door for industry evolution to produce AI purpose-built for specific marketing verticals.
 
 ---
 
