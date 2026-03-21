@@ -22,6 +22,24 @@ The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical s
 
 ---
 
+## Why Wine E-Commerce
+
+Wine is a harder problem than it looks — and that's exactly what makes it a useful design canvas.
+
+**Regulatory complexity.** Wine shipping laws vary by state. Suppression isn't a nice-to-have — it's compliance. The system checks eligibility before every send, not as an afterthought.
+
+**Personas that segment sharply.** A Gifter buying for an occasion, an Explorer choosing by region, a Collector building a cellar — they're buying the same product for completely different reasons. RFM scores alone don't capture this. The data model carries persona affinity, varietal preference, and occasion signals as first-class fields so the AI targets the right person with the right message, rather than applying a blanket offer.
+
+**A seasonal calendar tied to culture, not just Q4.** Rodeo season. Harvest releases. Holiday gifting windows. The calendar is structured around wine culture events that a generic retail model doesn't represent. The Houston Rodeo campaign walkthrough shows what happens when the AI is given this context and asked to act on it — it surfaces city-level market angles that no human team would research at scale.
+
+**Vintages, not SKUs.** A product that sells out is gone. Overstock at a fixed price point ties up cash in a way clothing can't markdown its way out of. The inventory signals — `days_of_supply`, `velocity_units_per_day`, high-intent-to-stock ratios — are purpose-built for this constraint.
+
+**Co-purchase intelligence that means something.** Burgundy buyers crossing into Champagne for gifting. Natural wine explorers discovering pét-nat. The affinity pairs aren't generic "customers also bought" signals — they reflect actual wine-buying behavior and drive bundle and cross-sell logic across campaigns.
+
+The wine vertical forces every design decision to be intentional. Generic marketing infrastructure doesn't fit. That's the point.
+
+---
+
 ## The Skills
 
 ![Skill Workflow](docs/Skill-Workflow.png)
