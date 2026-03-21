@@ -16,7 +16,7 @@ The question driving every decision was: what does a marketing department actual
 
 Critically, **everything designed here — the MCP functions, the data schemas, the skill prompts, even the output artifacts — is an interface for AI to consume, not for humans.** Those answers became the spec.
 
-The result is **14 autonomous skills** running the full marketing lifecycle — strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill runs on a schedule or on demand and communicates with every other skill through a shared MCP data layer rather than direct calls. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution.
+The result is **14 self-running skills** covering the full marketing lifecycle — strategy, content, email, paid media, social, SEO, personalisation, analytics, and customer intelligence. Each skill runs on a schedule or on demand and communicates with every other skill through a shared MCP data layer rather than direct calls. The skills run inside **[Claude's Cowork](https://claude.ai/cowork)** — a human operator maintains a small number of approval gates (the places where judgment matters most) but owns no day-to-day marketing execution.
 
 The deeper bet: **MCP as a vertical standard.** An MCP server with a canonical schema for a marketing vertical could become the stable interface between AI and the marketing stack — letting the AI layer and the tooling layer improve independently, without the bespoke coupling that makes most AI marketing deployments fragile. **And it opens the door for industry evolution to produce AI purpose-built for specific marketing verticals.**
 
@@ -44,7 +44,7 @@ The wine vertical forces every design decision to be intentional. Generic market
 
 ![Skill Workflow](docs/Skill-Workflow.png)
 
-14 skills run the full marketing lifecycle — from inventory detection to campaign execution to retrospective. Each skill is autonomous, runs on a schedule or on demand, and communicates with every other skill through the shared MCP data layer.
+14 skills run the full marketing lifecycle — from inventory detection to campaign execution to retrospective. Each skill runs on a schedule or on demand, and communicates with every other skill through the shared MCP data layer.
 
 | Skill | Schedule | Description |
 |---|---|---|
@@ -63,7 +63,7 @@ The wine vertical forces every design decision to be intentional. Generic market
 | `/trace-campaign` | On demand | Produces a full narrative audit document for a given campaign ID |
 | `/inspect-customer` | On demand | Produces a 360° customer brief with RFM, CLV, affinity, session history, and next-best-action |
 
-**Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files. These were triggered manually during testing — in production, skills run autonomously on their schedules, with the human only stepping in at the approval gates.
+**Skills in action** — walkthroughs showing each skill running end-to-end: the prompt, the MCP calls, the Gate decisions, and the output files. These were triggered manually during testing — in production, skills run on their own schedules, with the human only stepping in at the approval gates.
 
 - [A Houston Rodeo Campaign](docs/examples/campaign-request/campaign-request.md) — `/campaign-request` → `/plan-campaign`
   The skill queries the product catalog for bold reds with food-pairing metadata, pulls seasonal calendar context, reads retrospective learnings, and writes a structured queue entry — then `/plan-campaign` turns it into a full approved brief. The system surfaces Houston-specific angles (Rodeo season, BBQ pairings, Texas pride) before the operator specifies a single parameter. City-level market intelligence at this granularity isn't scalable without AI.
